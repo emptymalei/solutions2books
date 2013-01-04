@@ -241,6 +241,75 @@ L^T\eta L =
 
 %%%%%%%%%%%%%  11.4    %%%%%%%%%%%%%
 \item
+\begin{equation}
+	\eta = L\eta L^T = \Lambda^{-1} \eta(\Lambda^{-1})^T = \Lambda^{-1} \eta(\Lambda^{T})^{-1}
+\end{equation}
+
+Inverse both sides
+\begin{equation}
+	\eta^{-1} = \Lambda^T \eta^{-1} \Lambda
+\end{equation}
+
+We already have $\eta^{-1} = \eta$, then
+\begin{equation}
+	\eta = \Lambda^T \eta \Lambda
+\end{equation}
+
+
+
+%%%%%%%  11.5  %%%%%%%
+\item
+To see the same physics means to have the same kinetic energy at center of mass system.
+
+Coordinate transformation leaves scalar unchanged. In this problem, $P_\mu P^\mu$ won't change when we change from one reference frame to another, i.e.,
+\begin{equation*}
+	-(E_1 + E_2)^2 + m^2 u_2^2c^2 = -(E_1' + E_2')^2 + (m u_1' + m u_2')^2c^2 .
+\end{equation*}
+
+We also have
+\begin{equation}
+	\begin{cases}
+	E_2^2=m^2 u_2^2 c^2 + m^2 c^4 \\
+	E_1=mc^2 \\
+	E_1'=E_2'\\
+	u_1'=-u_2'
+	\end{cases}
+\end{equation}
+
+But the mass of proton is so small compared to the accelerator energy that we can drop $mc^2$ term in our calculation.
+
+Then the energy of the incoming proton in lab frame is
+\begin{equation}
+	E_2 \approx \frac{2 E_1^2}{mc^2} \approx 10^5 \text{TeV}
+\end{equation}
+
+
+
+
+%%%%%%%%%%   11.5   %%%%%%%%%%%%%
+\item
+
+Take the divergence of both sides of Maxwell-Ampere law
+\begin{eqnarray}
+	\nabla \cdot \nabla \times \mathbf B &=& \mu_0 \nabla\cdot\mathbf j + \epsilon_0 \mu_0 \nabla\cdot\dot{\mathbf E} \\
+	0 &=& \nabla\cdot \mathbf j + \epsilon_0\nabla\cdot \dot{\mathbf E}
+\end{eqnarray}
+
+Divergence of electric field is
+\begin{equation}
+	\nabla\cdot \mathbf E = \frac \rho {\epsilon_0}
+\end{equation}
+
+Thus
+\begin{equation}
+	0 = \nabla\cdot \mathbf j + \dot{\rho}
+\end{equation}
+
+
+%%%%%%%%%   11.7   %%%%%%%%%%%%
+\item
+
+
 
 
 
