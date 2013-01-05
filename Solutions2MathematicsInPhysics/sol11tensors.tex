@@ -332,6 +332,7 @@ This shows the symmetric part doesn't contribute to $M_{ik}\mathrm dx^i\mathrm d
 Symmetric part contributes to $M_{ik}\mathrm dx^i\mathrm dx^k$.
 
 
+For $M_{ik} \mathrm dx^i\mathrm dx^k = \frac{1}{2}(M_{ik} + M_{ki})\mathrm dx^i\mathrm dx^k + \frac{1}{2}(M_{ik} - M_{ki})\mathrm dx^i\mathrm dx^k$,
 
 \begin{eqnarray}
 	&&\frac12 (M_{ik} - M_{ki})\mathrm dx^i \mathrm dx^k
@@ -349,6 +350,84 @@ Symmetric part contributes to $M_{ik}\mathrm dx^i\mathrm dx^k$.
 
 Antisymmetric part doesn't contribute to $M_{ik}\mathrm dx^i\mathrm dx^k$.
 
+
+
+
+
+
+%%%%%%    11.8       %%%%%%%%
+\item
+
+{\color{red}(On page 507, the other half of parentheses is lost.)}
+
+For any 3 dimensional vector, 
+\begin{eqnarray}
+	(\nabla\times(\nabla\times \mathbf E))_i&=&\sum_{j,k=1}^3\epsilon_{ijk}\partial_j(\nabla\times E)_k \\
+	 &=& \sum_{j,k,l,m=1}^3 \epsilon_{ijk}\partial_j\epsilon_{klm}\partial_l E_m \\
+	 &=&\sum_{j,l,m=1}^3 (\delta_{il}\delta_{jm} - \delta_{im}\delta_{jl})\partial_j\partial_l E_m \\
+	 &=&\sum_{j,l,m=1}^3 \delta_{il}\delta_{jm}\partial_j\partial_l E_m  - \sum_{j,l,m=1}^3 \delta_{im}\delta_{jl}\partial_j\partial_l E_m \\
+	 &=&\sum_{j,l,m=1}^3 \delta_{il}\delta_{jm}\partial_j\partial_l E_m  - \sum_{j,l,m=1}^3 \delta_{im}\delta_{jl}\partial_j\partial_l E_m \\
+	 &=&\partial_i(\nabla\times \mathbf E) - \partial_j\partial_j E_i \\
+	 &=&(\nabla(\nabla\times \mathbf E))_i - (\Delta \mathbf E)_i
+\end{eqnarray}
+
+
+
+
+
+%%%%%%%  11.9   %%%%%%
+\item
+
+\begin{eqnarray}
+	\partial_i F_{jk} &=& \partial_i (\partial_j A_k - \partial_k A_j) \\
+	&=& \partial_i\partial_j A_k - \partial_i\partial_k A_j
+\end{eqnarray}
+
+
+\begin{eqnarray}
+	\partial_k F_{ij} &=& \partial_k (\partial_i A_j - \partial_j A_i) \\
+	&=& \partial_k\partial_i A_j - \partial_k\partial_j A_i
+\end{eqnarray}
+
+\begin{eqnarray}
+	\partial_j F_{ki} &=& \partial_j (\partial_k A_i - \partial_i A_k) \\
+	&=& \partial_j\partial_k A_i - \partial_j\partial_i A_k
+\end{eqnarray}
+
+
+Sum up
+\begin{eqnarray}
+	&&\partial_i F_{jk} + \partial_k F_{ij} +\partial_j F_{ki} \\
+	&=& \partial_i\partial_j A_k - \partial_i\partial_k A_j + \partial_k\partial_i A_j - \partial_k\partial_j A_i +  \partial_j\partial_k A_i - \partial_j\partial_i A_k \\
+	&=& 0
+\end{eqnarray}
+
+
+
+
+
+
+
+
+%%%%%    11.10    %%%%%%%%
+\item
+
+Assume
+\begin{equation}
+	A = A_{i_1\cdots i_p} \mathrm dx^{i_1}\wedge\cdots \wedge \mathrm dx^{i_p}
+\end{equation}
+\begin{equation}
+	B = B_{i_1\cdots i_q} \mathrm dx^{i_1}\wedge \cdots\wedge \mathrm dx^{i_q}
+\end{equation}
+
+\begin{eqnarray}
+	\mathrm d(AB) &=& \mathrm d((A_{i_1\cdots i_p} \mathrm dx^{i_1}\wedge\cdots \wedge \mathrm dx^{i_p}) \wedge (B_{i_1\cdots i_q}  \mathrm dx^{i_1}\wedge \cdots\wedge \mathrm dx^{i_q})) \\
+	&=& \partial_k A_{i_1\cdots i_p} \mathrm dx^k   \mathrm dx^{i_1}\wedge\cdots \wedge \mathrm dx^{i_p}  \wedge (B_{i_1\cdots i_q}  \mathrm dx^{i_1}\wedge \cdots\wedge \mathrm dx^{i_q})  \\
+	&&+ A_{i_1\cdots i_p} \partial_k B_{i_1\cdots i_q} \mathrm dx^k   \mathrm dx^{i_1}\wedge\cdots \wedge \mathrm dx^{i_p}  \wedge (\mathrm dx^{i_1}\wedge \cdots\wedge \mathrm dx^{i_q})  \\
+	&=& \mathrm d A  \wedge B  \\
+	&& + A_{i_1\cdots i_p} (-1)^p   \mathrm dx^{i_1}\wedge\cdots \wedge \mathrm dx^{i_p}  \wedge (\partial_k B_{i_1\cdots i_q} \mathrm dx^k  \mathrm dx^{i_1}\wedge \cdots\wedge \mathrm dx^{i_q})   \\
+	&=&  \mathrm d A  \wedge B   + (-1)^p A\wedge \mathrm d B
+\end{eqnarray}
 
 
 
