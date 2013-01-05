@@ -309,6 +309,49 @@ Thus
 %%%%%%%%%   11.7   %%%%%%%%%%%%
 \item
 
+\begin{equation}
+	M_{ik} = \frac{1}{2}(M_{ik} + M_{ki}) + \frac{1}{2}(M_{ik} - M_{ki})
+\end{equation}
+in which the first part is symmetric and the second is antisymmetric.
+
+Exchange $i$ and $k$,
+\begin{eqnarray}
+	&&\frac12 (M_{ik} + M_{ki})\mathrm dx^i\wedge \mathrm dx^k
+	= -\frac12(M_{ki} + M_{ik})\mathrm dx^k\wedge \mathrm dx^i \\
+	\rightarrow && (M_{ik} + M_{ki})\mathrm dx^i\wedge \mathrm dx^k = 0
+\end{eqnarray}
+
+This shows the symmetric part doesn't contribute to $M_{ik}\mathrm dx^i\mathrm dx^k$.
+
+\begin{eqnarray}
+	&&\frac12 (M_{ik} - M_{ki})\mathrm dx^i\wedge \mathrm dx^k
+	= \frac12(M_{ki} - M_{ik})\mathrm dx^k\wedge \mathrm dx^i 
+	= -\frac12(M_{ki} - M_{ik})\mathrm dx^i\wedge \mathrm dx^k
+\end{eqnarray}
+
+Symmetric part contributes to $M_{ik}\mathrm dx^i\mathrm dx^k$.
+
+
+
+\begin{eqnarray}
+	&&\frac12 (M_{ik} - M_{ki})\mathrm dx^i \mathrm dx^k
+	= \frac12(M_{ki} - M_{ik})\mathrm dx^k \mathrm dx^i \\
+	\rightarrow && \frac12 (M_{ik} - M_{ki})\mathrm dx^i \mathrm dx^k
+	= - \frac12(M_{ik} - M_{ki})\mathrm dx^k \mathrm dx^i \\
+	\rightarrow && \frac12 (M_{ik} - M_{ki})\mathrm dx^i \mathrm dx^k =0
+\end{eqnarray}
+
+
+\begin{eqnarray}
+	&&\frac12 (M_{ik} + M_{ki})\mathrm dx^i \mathrm dx^k
+	= \frac12(M_{ki} + M_{ik})\mathrm dx^k \mathrm dx^i
+\end{eqnarray}
+
+Antisymmetric part doesn't contribute to $M_{ik}\mathrm dx^i\mathrm dx^k$.
+
+
+
+
 
 
 
