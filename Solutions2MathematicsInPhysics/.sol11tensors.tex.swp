@@ -559,8 +559,33 @@ In this problem $g_{ij}=\eta_{ij}$, which gives $\det g_{ij} =  1$ and $s=1$.
 
 \begin{eqnarray*}
 	**(\mathrm dx^i\wedge\mathrm dx^j) &=& *(\frac12 g^{ik}g^{jl}\eta_{klmn}\mathrm dx^m\wedge \mathrm dx^n) \\
-	&=& 
+	&=& \frac12 g^{ik}g^{jl}\eta_{klmn} *(\mathrm dx^m\wedge \mathrm dx^n ) \\
+	&=&\frac12 g^{ik}g^{jl}\eta_{klmn} \frac12 g^{mr}g^{ns} \eta_{rswt} \mathrm dx^w \wedge \mathrm dx^t \\
+	&=&\frac14 \eta^{ij}_{\phantom {ij}mn}\eta^{mn}_{\phantom{mn}wt}\mathrm dx^w\wedge\mathrm dx^t \\
+	&=&-\mathrm dx^i\wedge\mathrm dx^j
 \end{eqnarray*}
+
+\begin{eqnarray*}
+	**(\mathrm dx^i\wedge\mathrm dx^j\wedge\mathrm dx^k)&=& *(g^{it}g^{ju}g^{kv}\eta_{tuvw}\mathrm dx^{w})\\
+	&=& g^{it}g^{ju}g^{kv}\eta_{tuvw}\frac{1}{3!}g^{wm}\eta_{mnrs}\mathrm dx^n\wedge\mathrm dx^r\wedge\mathrm dx^s \\
+	&=&\frac1{3!} \eta^{ijk}_{\phantom {ijk}w}\eta^w_{\phantom w nrs}\mathrm dx^n\wedge\mathrm dx^r\wedge\mathrm dx^s \\
+	&=&\mathrm dx^n\wedge\mathrm dx^r\wedge\mathrm dx^s
+\end{eqnarray*}
+
+
+
+\begin{eqnarray*}
+	**1 &=& *(\frac1{4!} \eta_{klmn} \mathrm dx^k\wedge\mathrm dx^l\wedge\mathrm dx^m\wedge\mathrm dx^n) \\
+	&=&\frac{1}{4!}\eta_{klmn} g^{ki}g^{lj}g^{mu}g^{nv}\eta_{ijuv} \\
+	&=&\frac{1}{4!}\eta_{klmn}\eta^{klmn} \\
+	&=& -1
+\end{eqnarray*}
+
+
+
+
+
+%%%%%%%%%%   11.17    %%%%%%%%
 
 
 
