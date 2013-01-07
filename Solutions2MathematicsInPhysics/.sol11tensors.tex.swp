@@ -446,6 +446,38 @@ Assume
 %%%%%%%%%%  11.12    %%%%%%%%%
 \item
 
+\begin{equation}
+	\delta^i_{\phantom ij} = g'^{ik} \frac{\partial x^t}{\partial x'^k} g_{tu}\frac{\partial x^u}{\partial x'^{j}}
+\end{equation}
+
+Multiply by $g^{lt}$
+\begin{eqnarray*}
+	g^{lt} \delta^i_{\phantom ij} &=& g'^{ik} \frac{\partial x^t}{\partial x'^k} g_{tu}\frac{\partial x^u}{\partial x'^{j}}g^{lt} \\
+	g^{lt} \delta^i_{\phantom ij} &=& g'^{ik} \frac{\partial x^t}{\partial x'^k} \delta^l_{\phantom l u}\frac{\partial x^u}{\partial x'^{j}} \\
+	g^{lt}\delta^i_{\phantom ij} &=& g'^{ik} \frac{\partial x^t}{\partial x'^k} \frac{\partial x^l}{\partial x'^{j}} \\
+	g^{lt} \frac{\partial x'^{j}}{\partial x^l} \delta^i_{\phantom ij}&=& g'^{ik} \frac{\partial x^t}{\partial x'^k}\\
+	g^{lt} \frac{\partial x'^{i}}{\partial x^l}&=& g'^{ik} \frac{\partial x^t}{\partial x'^k} \\
+		 \frac{\partial x'^k}{\partial x^t} g^{lt} \frac{\partial x'^{i}}{\partial x^l}&=& g'^{ik}
+\end{eqnarray*}
+
+
+
+
+
+%%%%%%%%%%%%%  11.13   %%%%%%%%%
+\item
+\begin{eqnarray*}
+	\mathrm dp &=& \mathbf{\hat x}( \cos\phi\mathrm d\rho -\rho\sin\phi\mathrm \phi ) + \mathbf{\hat y} (\sin\phi\mathrm d \rho + \rho\cos\phi\mathrm d\phi) + \mathbf {\hat z} \mathrm d z \\
+	&=& \mathbf{\hat \rho} \mathrm d\rho + \mathbf{\hat \phi} \rho \mathrm d \phi + \mathbf{\hat z} \mathrm dz
+\end{eqnarray*}
+
+Collect the terms
+\begin{equation}
+	\mathrm d\rho(\cos\phi\mathrm d \rho \mathbf{\hat x} + \sin\phi \mathrm d \rho \mathbf{\hat y}) + \mathrm d \phi(-\rho\sin\phi \mathbf{\hat x} + \rho\cos\theta \mathbf{\hat y}) + \mathbf{\hat z}\mathrm dz
+	= \mathbf{\hat \rho} \mathrm d\rho + \mathbf{\hat \phi} \rho \mathrm d \phi + \mathbf{\hat z} \mathrm dz
+\end{equation}
+
+
 
 
 
