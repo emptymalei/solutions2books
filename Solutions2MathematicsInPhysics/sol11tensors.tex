@@ -154,10 +154,10 @@ Partial derivatives
 
 To summarize
 
-\begin{eqnarray}
+\begin{eqnarray*}
 \frac{\partial \theta}{\partial x} =-\frac{y}{r^2} &\neq& \frac{\partial x}{\partial\theta} = -y \\
 \frac{\partial \theta}{\partial y} = \frac{x}{r^2} &\neq& \frac{\partial y}{\partial\theta} =  x
-\end{eqnarray}
+\end{eqnarray*}
 
 
 
@@ -183,7 +183,7 @@ L =
 
 into $L^T \eta L$.
 
-\begin{eqnarray}
+\begin{eqnarray*}
 L^T \eta L 
 &=& 
 \begin{pmatrix}
@@ -224,7 +224,7 @@ L^T \eta L
 0 & 0 & 1 & 0 \\
 0 & 0 & 0 & 1
 	\end{pmatrix}
-\end{eqnarray}
+\end{eqnarray*}
 
 Since $\beta=\sqrt{\gamma^2-1}$,
 \begin{equation}
@@ -290,19 +290,19 @@ Then the energy of the incoming proton in lab frame is
 \item
 
 Take the divergence of both sides of Maxwell-Ampere law
-\begin{eqnarray}
-	\nabla \cdot \nabla \times \mathbf B &=& \mu_0 \nabla\cdot\mathbf j + \epsilon_0 \mu_0 \nabla\cdot\dot{\mathbf E} \\
-	0 &=& \nabla\cdot \mathbf j + \epsilon_0\nabla\cdot \dot{\mathbf E}
-\end{eqnarray}
+\begin{eqnarray*}
+	\nabla \cdot \nabla \times \bm B &=& \mu_0 \nabla\cdot\bm j + \epsilon_0 \mu_0 \nabla\cdot\dot{\bm E} \\
+	0 &=& \nabla\cdot \bm j + \epsilon_0\nabla\cdot \dot{\bm E}
+\end{eqnarray*}
 
 Divergence of electric field is
 \begin{equation}
-	\nabla\cdot \mathbf E = \frac \rho {\epsilon_0}
+	\nabla\cdot \bm E = \frac \rho {\epsilon_0}
 \end{equation}
 
 Thus
 \begin{equation}
-	0 = \nabla\cdot \mathbf j + \dot{\rho}
+	0 = \nabla\cdot \bm j + \dot{\rho}
 \end{equation}
 
 
@@ -315,38 +315,38 @@ Thus
 in which the first part is symmetric and the second is antisymmetric.
 
 Exchange $i$ and $k$,
-\begin{eqnarray}
+\begin{eqnarray*}
 	&&\frac12 (M_{ik} + M_{ki})\mathrm dx^i\wedge \mathrm dx^k
 	= -\frac12(M_{ki} + M_{ik})\mathrm dx^k\wedge \mathrm dx^i \\
 	\rightarrow && (M_{ik} + M_{ki})\mathrm dx^i\wedge \mathrm dx^k = 0
-\end{eqnarray}
+\end{eqnarray*}
 
 This shows the symmetric part doesn't contribute to $M_{ik}\mathrm dx^i\mathrm dx^k$.
 
-\begin{eqnarray}
+\begin{eqnarray*}
 	&&\frac12 (M_{ik} - M_{ki})\mathrm dx^i\wedge \mathrm dx^k
 	= \frac12(M_{ki} - M_{ik})\mathrm dx^k\wedge \mathrm dx^i 
 	= -\frac12(M_{ki} - M_{ik})\mathrm dx^i\wedge \mathrm dx^k
-\end{eqnarray}
+\end{eqnarray*}
 
 Symmetric part contributes to $M_{ik}\mathrm dx^i\mathrm dx^k$.
 
 
 For $M_{ik} \mathrm dx^i\mathrm dx^k = \frac{1}{2}(M_{ik} + M_{ki})\mathrm dx^i\mathrm dx^k + \frac{1}{2}(M_{ik} - M_{ki})\mathrm dx^i\mathrm dx^k$,
 
-\begin{eqnarray}
+\begin{eqnarray*}
 	&&\frac12 (M_{ik} - M_{ki})\mathrm dx^i \mathrm dx^k
 	= \frac12(M_{ki} - M_{ik})\mathrm dx^k \mathrm dx^i \\
 	\rightarrow && \frac12 (M_{ik} - M_{ki})\mathrm dx^i \mathrm dx^k
 	= - \frac12(M_{ik} - M_{ki})\mathrm dx^k \mathrm dx^i \\
 	\rightarrow && \frac12 (M_{ik} - M_{ki})\mathrm dx^i \mathrm dx^k =0
-\end{eqnarray}
+\end{eqnarray*}
 
 
-\begin{eqnarray}
+\begin{eqnarray*}
 	&&\frac12 (M_{ik} + M_{ki})\mathrm dx^i \mathrm dx^k
 	= \frac12(M_{ki} + M_{ik})\mathrm dx^k \mathrm dx^i
-\end{eqnarray}
+\end{eqnarray*}
 
 Antisymmetric part doesn't contribute to $M_{ik}\mathrm dx^i\mathrm dx^k$.
 
@@ -361,15 +361,15 @@ Antisymmetric part doesn't contribute to $M_{ik}\mathrm dx^i\mathrm dx^k$.
 {\color{red}(On page 507, the other half of parentheses is lost.)}
 
 For any 3 dimensional vector, 
-\begin{eqnarray}
-	(\nabla\times(\nabla\times \mathbf E))_i&=&\sum_{j,k=1}^3\epsilon_{ijk}\partial_j(\nabla\times E)_k \\
+\begin{eqnarray*}
+	(\nabla\times(\nabla\times \bm E))_i&=&\sum_{j,k=1}^3\epsilon_{ijk}\partial_j(\nabla\times E)_k \\
 	 &=& \sum_{j,k,l,m=1}^3 \epsilon_{ijk}\partial_j\epsilon_{klm}\partial_l E_m \\
 	 &=&\sum_{j,l,m=1}^3 (\delta_{il}\delta_{jm} - \delta_{im}\delta_{jl})\partial_j\partial_l E_m \\
 	 &=&\sum_{j,l,m=1}^3 \delta_{il}\delta_{jm}\partial_j\partial_l E_m  - \sum_{j,l,m=1}^3 \delta_{im}\delta_{jl}\partial_j\partial_l E_m \\
 	 &=&\sum_{j,l,m=1}^3 \delta_{il}\delta_{jm}\partial_j\partial_l E_m  - \sum_{j,l,m=1}^3 \delta_{im}\delta_{jl}\partial_j\partial_l E_m \\
-	 &=&\partial_i(\nabla\times \mathbf E) - \partial_j\partial_j E_i \\
-	 &=&(\nabla(\nabla\times \mathbf E))_i - (\Delta \mathbf E)_i
-\end{eqnarray}
+	 &=&\partial_i(\nabla\times \bm E) - \partial_j\partial_j E_i \\
+	 &=&(\nabla(\nabla\times \bm E))_i - (\Delta \bm E)_i
+\end{eqnarray*}
 
 
 
@@ -378,29 +378,29 @@ For any 3 dimensional vector,
 %%%%%%%  11.9   %%%%%%
 \item
 
-\begin{eqnarray}
+\begin{eqnarray*}
 	\partial_i F_{jk} &=& \partial_i (\partial_j A_k - \partial_k A_j) \\
 	&=& \partial_i\partial_j A_k - \partial_i\partial_k A_j
-\end{eqnarray}
+\end{eqnarray*}
 
 
-\begin{eqnarray}
+\begin{eqnarray*}
 	\partial_k F_{ij} &=& \partial_k (\partial_i A_j - \partial_j A_i) \\
 	&=& \partial_k\partial_i A_j - \partial_k\partial_j A_i
-\end{eqnarray}
+\end{eqnarray*}
 
-\begin{eqnarray}
+\begin{eqnarray*}
 	\partial_j F_{ki} &=& \partial_j (\partial_k A_i - \partial_i A_k) \\
 	&=& \partial_j\partial_k A_i - \partial_j\partial_i A_k
-\end{eqnarray}
+\end{eqnarray*}
 
 
 Sum up
-\begin{eqnarray}
+\begin{eqnarray*}
 	&&\partial_i F_{jk} + \partial_k F_{ij} +\partial_j F_{ki} \\
 	&=& \partial_i\partial_j A_k - \partial_i\partial_k A_j + \partial_k\partial_i A_j - \partial_k\partial_j A_i +  \partial_j\partial_k A_i - \partial_j\partial_i A_k \\
 	&=& 0
-\end{eqnarray}
+\end{eqnarray*}
 
 
 
@@ -467,26 +467,100 @@ Multiply by $g^{lt}$
 %%%%%%%%%%%%%  11.13   %%%%%%%%%
 \item
 \begin{eqnarray*}
-	\mathrm dp &=& \mathbf{\hat x}( \cos\phi\mathrm d\rho -\rho\sin\phi\mathrm \phi ) + \mathbf{\hat y} (\sin\phi\mathrm d \rho + \rho\cos\phi\mathrm d\phi) + \mathbf {\hat z} \mathrm d z \\
-	&=& \mathbf{\hat \rho} \mathrm d\rho + \mathbf{\hat \phi} \rho \mathrm d \phi + \mathbf{\hat z} \mathrm dz
+	\mathrm dp &=& \bm{\hat x}( \cos\phi\mathrm d\rho -\rho\sin\phi\mathrm \phi ) + \bm{\hat y} (\sin\phi\mathrm d \rho + \rho\cos\phi\mathrm d\phi) + \bm {\hat z} \mathrm d z \\
+	&=& \bm{\hat \rho} \mathrm d\rho + \bm{\hat \phi} \rho \mathrm d \phi + \bm{\hat z} \mathrm dz
 \end{eqnarray*}
 
 Collect the terms
 \begin{equation}
-	\mathrm d\rho(\cos\phi\mathrm d \rho \mathbf{\hat x} + \sin\phi \mathrm d \rho \mathbf{\hat y}) + \mathrm d \phi(-\rho\sin\phi \mathbf{\hat x} + \rho\cos\theta \mathbf{\hat y}) + \mathbf{\hat z}\mathrm dz
-	= \bm{\hat \rho} \mathrm d\rho + \bm{\hat \phi} \rho \mathrm d \phi + \mathbf{\hat z} \mathrm dz
+	\mathrm d\rho(\cos\phi\mathrm d \rho \bm{\hat x} + \sin\phi \mathrm d \rho \bm{\hat y}) + \mathrm d \phi(-\rho\sin\phi \bm{\hat x} + \rho\cos\theta \bm{\hat y}) + \bm{\hat z}\mathrm dz
+	= \bm{\hat \rho} \mathrm d\rho + \bm{\hat \phi} \rho \mathrm d \phi + \bm{\hat z} \mathrm dz
 \end{equation}
 
 The coefficients of each derivative should be the same
-\begin{equation}
-	aa
-\end{equation}
+\begin{eqnarray*}
+	\bm {\hat \rho} &=& \cos\phi \bm {\hat x} + \sin\phi \bm{\hat y} \\
+	\bm {\hat phi} &=& -\sin\phi\bm{\hat x} + \cos\phi \bm{\hat y} \\
+	\bm {\hat z} &=& \bm {\hat z}
+\end{eqnarray*}
+
+
+
+
+%%%%%%%%%%    11.14   %%%%%%%
+\item
+\begin{eqnarray*}
+	\mathrm dp &=& \bm{\hat x} (-r\sin\theta\sin\phi\mathrm d \phi + r\cos\phi\cos\theta \mathrm d\theta + \sin\theta\cos\phi \mathrm dr) + \bm{\hat y} (r\sin\theta\cos\phi \mathrm d \phi \\
+	&&+ r \sin\phi\cos\theta\mathrm d\theta + \sin\theta\sin\phi \mathrm dr) + \bm{\hat z} (-r\sin\theta\mathrm d\theta + \cos\theta\mathrm dr) \\
+	&=& \bm {\hat r} \mathrm dr + \bm{\hat\theta}r \mathrm d\theta + \bm{\hat \phi} r\sin\theta \mathrm d\phi
+\end{eqnarray*}
+
+Collect the terms
+
+\begin{equation*}
+\begin{split}
+&	(-r\sin\theta\sin\phi\bm{\hat x} + r\sin\theta\cos\phi \bm{\hat y})  \mathrm d\phi + (r\cos\phi\cos\theta\bm{\hat x} + r\sin\phi\cos\theta \bm{\hat y} - r\sin\theta \bm{\hat z})\mathrm d\theta  \\
+& + ( \sin\theta\cos\phi \bm{\hat x} + \sin\theta\sin\phi \bm{\hat y} + \cos\theta \bm{\hat z} )\mathrm dr   \\
+	=& \bm {\hat r} \mathrm dr + \bm{\hat\theta}r \mathrm d\theta + \bm{\hat \phi} r\sin\theta \mathrm d\phi
+\end{split}
+\end{equation*}
+
+
+
+\begin{eqnarray*}
+	\bm{\hat \phi}&=&-\sin\phi\bm{\hat x} + \cos\phi \bm{\hat y} \\
+	\bm{\hat \theta}&=&\cos\phi\cos\theta\bm{\hat x} + \sin\phi\cos\theta \bm{\hat y} - \sin\theta \bm{\hat z} \\
+	\bm{\hat r} &=&  \sin\theta\cos\phi \bm{\hat x} + \sin\theta\sin\phi \bm{\hat y} + \cos\theta \bm{\hat z} 
+\end{eqnarray*}
 
 
 
 
 
 
+
+%%%%%%%%%%     11.15    %%%%%
+\item
+
+{\color{red}A flat 3-space means the Riemann curvature is zero. But I have no idea about the metric. Any metric that is conformal with a flat metric indicates a flat space. But here I use $g_{ij}=\eta_{ij}$, which gives $\det g_{ij} =  1$ and $s=1$. Am I wrong?}
+
+In this problem $g_{ij}=\eta_{ij}$, which gives $\det g_{ij} =  1$ and $s=1$.
+
+\begin{eqnarray*}
+	**\mathrm dx^i &=& * (\frac12 g^{il}\eta_{ljk}\mathrm dx^j\wedge\mathrm dx^k) \\
+	&=& \frac 1 2 \eta^{il} *(\mathrm dx^j\wedge\mathrm d x^k ) \\
+	&=& \frac 1 2 \eta^{il} g^{jm}g^{kn} \eta_{mnt}\mathrm dx^t \\
+	&=& \frac12g^{il} \sqrt g \epsilon_{ljk} g^{jm}g^{kn} \sqrt g \epsilon_{mnt} \mathrm dx^t   \\
+	&=& \frac{1}{2}\epsilon^{i}_{\phantom ijk}\epsilon^{jk}_{\phantom{jk}t}\mathrm dx^t \\
+	&=&\mathrm dx^i
+\end{eqnarray*}
+
+\begin{eqnarray*}
+	**(\mathrm dx^i\wedge\mathrm dx^k) &=& *(g^{ik}g^{jl}\eta_{klm}\mathrm dx^m) \\
+	&=& g^{ik}g^{jl} \eta_{klm} * \mathrm dx^m \\
+	&=& g^{ik}g^{jl} \eta_{klm} \frac12 g^{mu}\eta_{uwt}\mathrm dx^w\wedge\mathrm dx^t \\
+	&=& g^{ik}g^{jl} \epsilon_{klm}\sqrt g \frac12 g^{mu}\epsilon_{uwt}\sqrt g \mathrm dx^w \wedge \mathrm dx^t \\
+	&=& \frac12 \epsilon^{ij}_{\phantom {ij}m}\epsilon^m_{\phantom m wt}\mathrm dx^w\wedge\mathrm dx^t \\
+	&=& \mathrm dx^i\wedge\mathrm dx^j
+\end{eqnarray*}
+
+
+
+
+
+%%%%    11.16    %%%%%%%%%%%
+\item
+\begin{eqnarray*}
+	**\mathrm dx^i &=& * (\frac1{3!}g^{ik}\eta_{klmn} \mathrm dx^l\wedge \mathrm dx^m \wedge \mathrm dx^n) \\
+	&=& \frac{1}{3!}g^{ik}\eta_{klmn}g^{lr}g^{ms}g^{nt}\eta_{rstu}\mathrm dx^u \\
+	&=& \frac{1}{3!} \eta^{i}_{\phantom ilmn} \eta^{lmn}_{\phantom {lmn}u}\mathrm dx^u \\
+	&=&\mathrm dx^i
+\end{eqnarray*}
+
+\begin{eqnarray*}
+	**(\mathrm dx^i\wedge\mathrm dx^j) &=& *(\frac12 g^{ik}g^{jl}\eta_{klmn}\mathrm dx^m\wedge \mathrm dx^n) \\
+	&=& 
+\end{eqnarray*}
 
 
 
