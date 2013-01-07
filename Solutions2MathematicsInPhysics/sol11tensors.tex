@@ -420,14 +420,34 @@ Assume
 	B = B_{i_1\cdots i_q} \mathrm dx^{i_1}\wedge \cdots\wedge \mathrm dx^{i_q}
 \end{equation}
 
-\begin{eqnarray}
-	\mathrm d(AB) &=& \mathrm d((A_{i_1\cdots i_p} \mathrm dx^{i_1}\wedge\cdots \wedge \mathrm dx^{i_p}) \wedge (B_{i_1\cdots i_q}  \mathrm dx^{i_1}\wedge \cdots\wedge \mathrm dx^{i_q})) \\
+\begin{eqnarray*}
+	\mathrm d(A\wedge B) &=& \mathrm d((A_{i_1\cdots i_p} \mathrm dx^{i_1}\wedge\cdots \wedge \mathrm dx^{i_p}) \wedge (B_{i_1\cdots i_q}  \mathrm dx^{i_1}\wedge \cdots\wedge \mathrm dx^{i_q})) \\
 	&=& \partial_k A_{i_1\cdots i_p} \mathrm dx^k   \mathrm dx^{i_1}\wedge\cdots \wedge \mathrm dx^{i_p}  \wedge (B_{i_1\cdots i_q}  \mathrm dx^{i_1}\wedge \cdots\wedge \mathrm dx^{i_q})  \\
 	&&+ A_{i_1\cdots i_p} \partial_k B_{i_1\cdots i_q} \mathrm dx^k   \mathrm dx^{i_1}\wedge\cdots \wedge \mathrm dx^{i_p}  \wedge (\mathrm dx^{i_1}\wedge \cdots\wedge \mathrm dx^{i_q})  \\
 	&=& \mathrm d A  \wedge B  \\
 	&& + A_{i_1\cdots i_p} (-1)^p   \mathrm dx^{i_1}\wedge\cdots \wedge \mathrm dx^{i_p}  \wedge (\partial_k B_{i_1\cdots i_q} \mathrm dx^k  \mathrm dx^{i_1}\wedge \cdots\wedge \mathrm dx^{i_q})   \\
 	&=&  \mathrm d A  \wedge B   + (-1)^p A\wedge \mathrm d B
-\end{eqnarray}
+\end{eqnarray*}
+
+
+
+%%%%%%% 11.11   %%%%%%
+\item
+
+\begin{eqnarray*}
+	\mathrm d\omega &=& \mathrm d (\frac 12 a_{ij}) \mathrm dx^i\wedge\mathrm dx^j \\
+	&=& \frac{1}{2}\partial_k a_{ij} \mathrm dx^k \wedge \mathrm dx^i \wedge \mathrm dx^j \\
+	&=& \frac 1 6 (\partial_k a_{ij}\mathrm dx^k\wedge\mathrm dx^i\wedge\mathrm dx^j + \partial_j a_{ki}\mathrm dx^j\wedge\mathrm d^k\wedge\mathrm dx^i + \partial_i a_{jk}\mathrm dx^i\wedge\mathrm dx^j\wedge\mathrm dx^k) \\
+	&=& \frac 1{3!}(\partial_k a_{ij}\mathrm dx^i\wedge\mathrm dx^j\wedge\mathrm dx^k + \partial_j a_{ki}\mathrm dx^i\wedge\mathrm d^j\wedge\mathrm dx^k + \partial_i a_{jk}\mathrm dx^i\wedge\mathrm dx^j\wedge\mathrm dx^k) \\
+	&=& \frac 1{3!}(\partial_k a_{ij} + \partial_j a_{ki} + \partial_i a_{jk})\mathrm dx^i\wedge\mathrm dx^j\wedge\mathrm dx^k
+\end{eqnarray*}
+
+
+%%%%%%%%%%  11.12    %%%%%%%%%
+\item
+
+
+
 
 
 
