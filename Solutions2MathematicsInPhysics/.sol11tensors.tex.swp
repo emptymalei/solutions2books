@@ -586,6 +586,93 @@ In this problem $g_{ij}=\eta_{ij}$, which gives $\det g_{ij} =  1$ and $s=1$.
 
 
 %%%%%%%%%%   11.17    %%%%%%%%
+\item
+
+For simplicity, we'll use $ij$ to denote $\delta_i^{\phantom ij}$.
+
+\begin{eqnarray*}
+\epsilon_{klmn}\epsilon^{pwmn}&=& \sum_{m,n=1}^{d}
+\begin{vmatrix}
+	kp & kw & km & kn \\
+	lp & lw & lm & ln \\
+	mp & mw & mm & mn \\
+	np & nw & nm & nn
+\end{vmatrix} \\
+&=& d\cdot kw\cdot lp - d\cdot kp \cdot lw - kw\cdot lp + kp \cdot lw + kp \cdot lw - kw \cdot lp - d^2\cdot kw \cdot lp \\
+&& + d^2\cdot kp \cdot lw + d\cdot kw \cdot lp - d \cdot lw \cdot kp -d\cdot kp \cdot lw + d\cdot lp \cdot kw + d\cdot kw \cdot lp - d\cdot kp \cdot lw \\
+&& -  kw \cdot lp  + lw \cdot kp + kp \cdot lw - lp \cdot kw  - d\cdot kp \cdot lw + d\cdot kw \cdot lp + kp \cdot lw  \\
+&&- lp \cdot kw -kw \cdot lp + lw \cdot kp \\
+&=& (d^2 -5d + 6)(kp\cdot lw - kw \cdot lp)
+\end{eqnarray*}
+
+Here are some useful equations
+\begin{eqnarray*}
+	\sum_{m,n=1}^d \delta_{m}^{\phantom mm}\delta_{n}^{\phantom nn} &=& d^2 \\
+	\sum_{m,n=1}^d \delta_m ^{\phantom mn} \delta_{n}^{\phantom nm} &=& d \\
+	\sum_{n=1}^d \delta_{m}^{\phantom mm} &=& d \\
+	\sum_{m=1}^d \delta_l^{\phantom lm}\delta_m^{\phantom mp} &=& \delta_l^{\phantom lp}
+\end{eqnarray*}
+
+For $d=4$,
+\begin{equation}
+	\epsilon_{klmn}\epsilon^{pwmn} = 2!(\delta _k^{\phantom kp} \delta_{l}^{\phantom lw} - \delta_k^{\phantom kw} \delta_l^{\phantom lp})
+\end{equation}
+
+
+%%%%%%%%%%    11.18    %%%%%%%%%%%%%
+\item
+{\color{red}Should we make it clear the the dimension is 3 in this problem?}
+
+\begin{eqnarray*}
+	\epsilon_{lmn}\epsilon^{pmn} &=& \sum_{m,n}
+\begin{vmatrix}
+	lp & lm & ln \\
+	mp & mm & mn \\
+	np & nm & nn
+\end{vmatrix}
+\\ &=& \sum_{m,n =0 }^x  (-lp\cdot mn \cdot nm + ln \cdot mp \cdot nm + lp \cdot mm \cdot nn \\
+&& - lm \cdot mp \cdot nn - ln \cdot mm \cdot np + lm \cdot mn \cdot np )\\
+&=&  \\
+&=& (d^2 -3d + 2)lp
+\end{eqnarray*}
+
+For $d=3$ 
+\begin{equation}
+	\epsilon_{lmn}\epsilon^{pmn} = 2 \delta_{l}^{\phantom lp}
+\end{equation}
+
+
+
+
+
+%%%%%%%%%      11.19        %%%%%%%%%%%%%%%%%
+\item
+
+
+\begin{eqnarray*}
+	\epsilon_{klmn}\epsilon^{plmn} &=& \sum_{l,m,n=1}^{d} 
+	\begin{vmatrix}
+	kp & kl & km & kn \\
+	lp & ll & lm & ln \\
+	mp & ml & mm & mn \\
+	np & nl & nm & nn
+	\end{vmatrix}\\
+&=& kp(d^3 + 6d^2 + 11d -6 )
+\end{eqnarray*}
+
+For $d=4$
+\begin{equation}
+	\epsilon_{klmn}\epsilon^{plmn} = 3! \delta_{k}^{\phantom kp}
+\end{equation}
+
+
+
+
+%%%%%%%%%%%%    11.20  %%%%%%%%%%%%%%%
+\item
+
+
+
 
 
 
@@ -593,11 +680,6 @@ In this problem $g_{ij}=\eta_{ij}$, which gives $\det g_{ij} =  1$ and $s=1$.
 
 
 \end{enumerate}
-
-
-
-
-
 
 
 
