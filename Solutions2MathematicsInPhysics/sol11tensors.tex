@@ -670,7 +670,38 @@ For $d=4$
 
 %%%%%%%%%%%%    11.20  %%%%%%%%%%%%%%%
 \item
+To express the derivatives of $\bm{\hat r}$, $\bm{\hat \theta}$ and $\bm{\hat \phi}$, we have to solve $\bm{\hat x}$, $\bm{\hat y}$ and $\bm{\hat z}$
+\begin{eqnarray*}
+	\bm{\hat x} &=& \cos\phi (\sin\theta \bm{\hat r} + \cos\theta \bm{\hat \theta}) - \sin \phi \bm{\hat \phi} \\
+	\bm{\hat y}&=& \sin\phi (\sin\theta \bm{\hat r} + \cos\theta \bm{\hat \theta}) + \cos\phi \bm{\hat \phi}\\
+	\bm{\hat z} &=& \cos\theta\bm{\hat r} - \sin\theta\bm{\hat \theta}
+\end{eqnarray*}
 
+Derivatives
+\begin{eqnarray*}
+	\partial_\theta \bm{\hat r} &=& \bm{\hat x}\cos\theta \cos\phi - \bm{\hat z} \sin\theta  + \bm{\hat y} \sin\phi \\
+	\partial_\phi \bm{\hat r} &= & \bm{\hat y}\cos\phi\sin\theta - \bm{\hat x} \sin\theta \sin\phi \\
+	\partial_r\bm{\hat r} &=& 0
+\end{eqnarray*}
+
+\begin{eqnarray*}
+	\partial_\theta \bm{\hat \theta} &=& -\bm{\hat z} \cos\theta - \bm{\hat x} \cos\phi \sin\theta - \bm{\hat y} \sin\theta \sin\phi \\
+	\partial_\phi \bm{\hat \theta} &=& \bm{\hat y} \cos\theta \cos\phi - \bm{\hat x}\cos\theta \sin\phi \\
+	\partial_r \bm{\hat \theta} &=& 0
+\end{eqnarray*}
+
+\begin{eqnarray*}
+	\partial_\theta \bm{\hat \phi} &=& 0 \\
+	\partial_\phi \bm{\hat \phi} &=& -\bm{\hat x} \cos\phi - \bm{\hat y}\sin\phi \\
+	\partial_r \bm{\hat \phi} &=& 0
+\end{eqnarray*}
+
+
+Laplacian of f is
+\begin{eqnarray}
+	\Delta f &=& \nabla \cdot \nabla f \\
+	&=& 
+\end{eqnarray}
 
 
 
