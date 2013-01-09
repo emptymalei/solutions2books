@@ -703,11 +703,26 @@ Derivatives
 \end{eqnarray*}
 
 
+\begin{eqnarray*}
+	\bm \nabla f &=& \bm{\hat r} \partial_r f + \frac{\bm{\hat \theta} }{r} \partial_\theta f + \frac{\bm{\hat \phi}}{r\sin\theta} \partial_\phi f
+\end{eqnarray*}
+
+
 Laplacian of f is
-\begin{eqnarray}
-	\Delta f &=& \nabla \cdot \nabla f \\
-	&=& 
-\end{eqnarray}
+\begin{eqnarray*}
+	\Delta f &=& \bm \nabla \cdot \bm \nabla f \\
+	&=& \bm{\hat r} \partial_r \left( \bm{\hat r} \partial_r f\right) + \bm{\hat r}\partial_r \left(\bm{\hat \theta} \frac{1}{r}\partial_\theta f \right) + \bm{\hat r} \partial_r \left( \bm{\hat \phi}\frac{1}{r\sin\theta}\partial_\phi f \right) \\
+	&& +  \bm{\hat\theta}\frac{1}{r}\partial_\theta \left( \bm{\hat r} \partial_r f \right) + \bm{\hat \theta} \frac{1}{r}\partial_\theta \left( \bm{\hat \theta}\frac{1}{r}\partial_\theta f \right) + \bm{\hat \theta} \frac 1 r \partial_\theta  \left( \bm{\hat \phi} \frac{1}{r\sin\theta}\partial_\phi f \right) \\
+	&& + \bm{\hat \phi} \frac{1}{r\sin\theta}\partial_\phi \left( \bm{\hat r} \partial_r f  \right) + \bm{\hat \phi} \frac{1}{r\sin\theta}\partial_\phi \left( \bm{\hat \theta} \frac 1 r \partial_\theta f \right) + \bm{\hat \phi} \frac{1}{r\sin\theta}\partial_\phi \left( \bm{\hat \phi} \frac{1}{r\sin\theta} \partial_\phi f \right) \\
+	&=& f_{,rr} + \frac{1}{r} + \frac{1}{r^2} f_{,\theta\theta} + \frac{1}{r\sin\theta} \sin\theta f_{,r} + \frac{1}{r\sin\theta} \cos\theta \frac{1}{r} f_{,\theta} + \frac{1}{r\sin\theta}\frac{1}{r\sin\theta}  f_{,\phi\phi} \\
+	&=& \frac{(r^2 f_{,r})_{,r}}{r^2} + \frac{(\sin\theta f_{,\theta})_{,\theta}}{r^2\sin\theta} + \frac{f_{,\phi\phi}}{r^2\sin^2\theta}
+\end{eqnarray*}
+
+
+
+
+%%%%%%%%%%       11.21    %%%%%%%%%%%%
+\item
 
 
 
