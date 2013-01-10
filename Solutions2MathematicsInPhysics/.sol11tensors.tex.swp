@@ -724,6 +724,129 @@ Laplacian of f is
 %%%%%%%%%%       11.21    %%%%%%%%%%%%
 \item
 
+For any point
+\begin{equation*}
+	\bm p = \bm{\hat x} \cos\phi (R + r\sin\theta) + \bm{\hat y} \sin\phi(R + r\sin\theta) + \bm{\hat z} r\cos\theta
+\end{equation*}
+
+Differential of $\bm p$,
+
+\begin{eqnarray*}
+	\mathrm d \bm p &=& \bm{\hat x} [ -\sin\phi(R + r\sin\theta) \mathrm d\phi + \cos\phi r \cos\theta \mathrm d\theta  ] \\
+	&& + \bm{\hat y} [ \cos\phi (R+r\sin\theta) \mathrm d\phi + \sin\phi r \cos\theta \mathrm d\theta  ]   + \bm{\hat z} [ - r\sin\theta \mathrm d\theta] \\
+	&=&[ -\sin\phi (R+r\sin\theta) \bm{\hat x} + \cos\phi (R+r\sin\theta)\bm{\hat y}  ]\mathrm d\phi \\
+	&& + [ \cos\phi r \cos\theta \bm{\hat x} + \sin\phi r\cos\theta \bm{\hat y} - r\sin\theta \bm{\hat z} ]\mathrm d\theta \\
+	&\equiv& e_\theta \mathrm d\theta + e_{\phi} \mathrm d\phi
+\end{eqnarray*}
+
+Orthonormal basis vectors are
+\begin{eqnarray*}
+	\bm{\hat \theta} &=& \cos\phi\cos\theta \bm{\hat x} + \sin\phi\cos\theta \bm{\hat y} - \sin\theta \bm{\hat z} \\
+	\bm{\hat \phi} &=& - \sin\phi \bm{\hat x} + \cos\phi \bm{\hat y}
+\end{eqnarray*}
+
+We get
+\begin{eqnarray*}
+	e_{\theta} &=& r \bm{\hat \theta}\\
+	e_{\phi}&=& - (R+r\sin\theta) \bm{\hat \phi}
+\end{eqnarray*}
+
+Metric of this torus is
+\begin{eqnarray*}
+	g_{\theta\theta} &=& r\bm{\hat \theta}\cdot r \bm{\hat \theta}\\
+	&=& r^2 \\
+	g_{\theta\phi}&=& r\bm{\hat \theta}\cdot (R+r\sin\theta)\bm{\hat\phi} \\
+	&& 0 \\
+	g_{\phi\phi}&=& (R+r\sin\theta) \bm{\hat \phi}\cdot (R+r\sin\theta)\bm{\hat \phi}\\
+	&=& (R+r\sin\theta)^2 \\
+	g_{\phi\theta}&=&  (R+r\sin\theta)\bm{\hat \phi} \cdot  r\bm{\hat\theta}\\
+	&=& 0
+\end{eqnarray*}
+
+Metric and its inverse are
+\begin{equation*}
+\bm g=\begin{pmatrix}
+	r^2 & 0 \\
+	0 & (R+r\sin\theta)^2 
+	\end{pmatrix}
+\end{equation*}
+
+\begin{equation*}
+	\bm {g^{-1}} = 
+	\begin{pmatrix}
+	1/r^2 & 0 \\
+	0 & 1/(R+r\sin\theta)^2
+	\end{pmatrix}
+\end{equation*}
+
+
+
+
+%%%%%%%%%    11.22    %%%%%%%
+\item
+
+
+Contravariant basis vectors are
+\begin{eqnarray*}
+	e^\theta &=& \bm{\hat \theta}/r \\
+	e^\phi &=& \bm{\hat \phi}/(R+r\sin\theta)
+\end{eqnarray*}
+
+
+Nozero connections are
+\begin{eqnarray*}
+	\Gamma ^{\phi}_{\theta\phi} &=& \frac{r\cos\theta}{R+r\sin\theta} \\
+	\Gamma^\theta_{\phi\phi}&=& - \frac{\cos\theta(R+r\sin\theta)}{r} \\
+	\Gamma^\phi _{\phi\theta} &=& \frac{r\cos\theta}{R+r\sin\theta}
+\end{eqnarray*}
+
+
+
+%%%%%%%  11.23    %%%%%%
+\item
+
+Christoffel matrices are
+\begin{eqnarray*}
+	\Gamma_\theta &=& \begin{pmatrix}
+	0 & 0 \\
+	0 & r\cos\theta/(R+r\sin\theta)
+	\end{pmatrix} \\
+	\Gamma_\phi &=& \begin{pmatrix}
+	r\cos\theta/(R+r\sin\theta) & -\cos\theta(R+r\sin\theta)/r \\
+	r\cos\theta/(R+r\sin\theta) & 0
+	\end{pmatrix}
+\end{eqnarray*}
+
+Commutator is
+\begin{equation*}
+	[\Gamma_\theta,\Gamma_\phi] = \begin{pmatrix}
+	0 & \cos^2\theta \\
+	r^2\cos^\theta/(R+r\sin\theta)^2 & 0
+	\end{pmatrix}
+\end{equation*}
+
+Riemann's curvature tensor
+\begin{eqnarray*}
+	R^\theta_{\phi\theta\phi} &=& \frac{\sin\theta(R+r\sin\theta)}{r} = -	R^{\theta}_{\phi\phi\theta} \\
+	R^\phi_{\theta\theta\phi} &=& -\frac{r\sin\theta}{R+r\sin\theta} = -R^\phi_{\theta\phi\theta}
+\end{eqnarray*}
+
+All other components are zero.
+
+
+
+
+%%%%%%   11.24    %%%%
+\item
+
+Ricci scalar is
+\begin{equation*}
+	R=\frac{2\sin\theta}{r(R+r\sin\theta)}
+\end{equation*}
+
+
+
+
 
 
 
