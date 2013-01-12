@@ -68,6 +68,7 @@
 
 
 %includeonly{}
+\usepackage{comment}
 
 \begin{document}
 %\title{TITLE}
@@ -107,6 +108,21 @@
 \section{Tensors and Local Symmetries}
 
 \begin{enumerate}
+
+
+
+\begin{comment}
+
+
+
+
+
+
+
+
+
+
+
 \item
 
 Transformation from euclidean (x,y) to polar (r,$\theta$) is
@@ -865,8 +881,155 @@ Change the indices
 
 
 
+
+
+
+
+
+
 %%%%%%%%%   11.26      %%%%%%%
 \item
+
+Schwarzchild radius of this sphere is
+\begin{eqnarray*}
+	r_S &=& \frac{2M G }{c^2}  \\
+	&=& \frac{8}{3}\pi r_b^3 \rho \frac{G}{c^2}
+\end{eqnarray*}
+
+If the radius of the sphere is less than Schwarzchild radius, the sphere behaves like a black hole,
+\begin{equation*}
+	r_b < \frac{8}{3}\pi r_b^3 \rho \frac{G}{c^2}
+\end{equation*}
+
+Simplify
+
+\begin{eqnarray*}
+	r_b > \sqrt{ \frac{3c^2}{8\pi \rho G} }
+\end{eqnarray*}
+
+If the sphere is made of water,
+
+\begin{equation}
+	r_b > 4\times 10^11 \mathrm m
+\end{equation}
+
+
+Dark energy mass density is about $7\times 10^{-27} \mathrm{kg/m^3}$,
+\begin{equation}
+	r_b > 1.5\times 10^{26} \mathrm m
+\end{equation}
+
+
+
+It's good to know that the observable universe is about $10^{26}\mathrm m$.
+
+
+
+
+
+
+
+
+\end{comment}
+%%%%%%%%%%    11.27      %%%%%%%%%%
+\item
+
+
+Derivative of the point 
+\begin{eqnarray*}
+	\mathrm d\bm p &=&  \bm{\hat t} \mathrm dt + [\bm{\hat x} a\cos\chi\sin\theta\cos\phi + \bm{\hat y} a\cos\chi\sin\theta\sin\phi + \bm{\hat z} a \cos\chi \cos\theta  - \bm{\hat m}a \sin\chi ]\mathrm d\chi \\
+	&& + [\bm{\hat x}a\sin\chi\cos\theta\cos\phi + \bm{\hat y} \sin\chi \cos\theta \sin\phi - \bm{\hat z} a\sin\chi \sin\theta ] \mathrm d\theta \\
+	&& + [- \bm{\hat x} a\sin\chi \sin\theta\sin\phi  + \bm{\hat y} a\sin\chi\sin\theta\cos\phi ]\mathrm d\phi
+\end{eqnarray*}
+
+Define $\sin\chi = r$. Then $\mathrm d\chi = \mathrm dr/\sqrt{1-r^2}$. ($0<\chi<\pi$)
+\begin{eqnarray*}
+	\mathrm d\bm p &\equiv&  e_t \mathrm dt + e_r \mathrm dr + e_\theta \mathrm d\theta  + e_\phi \mathrm d\phi \\
+	&\equiv&  \bm {\hat {e_t}} \mathrm dt + \frac{a}{\sqrt{1-r^2}} \bm{\hat e_r}\mathrm dr + a r  \bm{\hat e_\theta} \mathrm d\theta  + a r \sin\theta \bm{\hat e_\phi} \mathrm d\phi
+\end{eqnarray*}
+
+
+\begin{eqnarray*}
+	g_{tt} &=& e_t (-1) e_t = -1 \\
+	g_{rr} &=& e_r e_r = \frac{a^2}{1-r^2} \\
+	g_{\theta\theta}&=& e_\theta e_\theta =a^2 r^2 \\
+	g_{\phi\phi}&=& e_\phi e_\phi = a^2 r^2 \sin^2\theta
+\end{eqnarray*}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%     11.28   %%%%%%%%%%
+\item
+
+\begin{eqnarray*}
+	\mathrm d\bm p &=&  \bm{\hat t}\mathrm dt + \bm{\hat x} ( a \sin\theta \cos\phi \mathrm d r  +  a r \cos\theta \cos\phi \mathrm d \theta - a r \sin\theta \sin\phi\mathrm d\phi ) \\
+	&& + \bm{\hat y} ( a\sin\theta\sin\phi \mathrm dr + a r\cos\theta \sin\phi \mathrm d \theta + a r \sin\theta \cos\phi \mathrm d\phi  )  \\
+	&& + \bm{\hat z} ( a \cos\theta \mathrm d r - a r \sin\theta \mathrm d \theta )  \\
+	&=& \bm{\hat t}\mathrm dt + ( \bm{\hat x}a \sin\theta \cos\phi + \bm{\hat y}a \sin\theta \sin\phi + \bm{\hat z}  a\cos\theta)\mathrm dr \\
+	&& + ( \bm{\hat x} a r \cos\theta \cos\phi + \bm{\hat y} a r\cos\theta\sin\phi - \bm{\hat z}  a r\sin\theta )\mathrm d\theta  \\
+	&& + ( -\bm{\hat x} a r \sin\theta\sin\phi + \bm{\hat y}a r \sin\theta\cos\phi )\mathrm d\phi \\
+	&\equiv& e_t \mathrm dt + e_r \mathrm dr + e_\theta \mathrm d \theta + e_\phi \mathrm d\phi \\
+	&\equiv& \bm{\hat e_t}\mathrm d t + a \bm{\hat e_r}\mathrm d r + a r \bm{\hat e_\theta} \mathrm d \theta + a r\sin\theta\bm{\hat e_\phi} \mathrm d \phi
+\end{eqnarray*}
+
+
+
+\begin{eqnarray*}
+	g_{tt}&=& e_t (-1) e_t = -1 \\
+	g_{rr}&=& e_r e_r = a^2 \\
+	g_{\theta\theta} &=& e_\theta e_\theta = a^2 r^2 \\
+	g_{\phi\phi} &=& e_\phi e_\phi = a^2 r^2 \sin^2\theta
+\end{eqnarray*}
+
+
+
+
+%%%%%%%%%%%%    11.29    %%%%%%%%%%
+\item
+
+\begin{eqnarray*}
+	\mathrm d\bm{p} &=& \bm{\hat t} \mathrm d t + \bm{\hat x} ( a \cosh \chi \sin\theta \cos\phi \mathrm d \chi + a \sinh\chi \cos\theta \cos\phi \mathrm d\theta - a \sinh \chi \sin\theta\sin\phi \mathrm d \phi  )  \\
+	&&  + \bm{\hat y} ( a\cosh\chi \sin\theta\sin\phi\mathrm d\chi + a\sinh\chi \cos\theta\sin\phi \mathrm d\theta  + a\sinh\chi \sin\theta \cos\phi \mathrm d \phi ) \\
+	&& + \bm{\hat z} ( a\cosh\chi \cos\theta\mathrm d\chi  - a\sinh\chi \sin\theta\mathrm d\theta ) \\
+	&=& \bm{\hat t} \mathrm dt + ( \bm{\hat x} a \cosh\chi\sin\theta \cos\phi + \bm{\hat y}a\cosh\chi \sin\theta\sin\phi + \bm{\hat z} a\cosh\chi\cos\theta )\mathrm d\chi \\
+	&& + ( \bm{\hat x} a\sinh\chi\cos\theta\cos\phi + \bm{\hat y}a\sinh\chi\cos\theta\sin\phi - \bm{\hat z}a\sinh\chi\sin\theta )\mathrm d\theta \\
+	&& + ( -\bm{\hat x} a \sinh\chi \sin\theta\sin\phi + \bm{\hat y} a\sinh\chi \sin\theta\cos\phi )\mathrm d\phi
+\end{eqnarray*}
+
+Since we have $\sinh\chi = r$, the derivative $\mathrm d\chi = \mathrm dr/\cosh\chi=\mathrm d r /\sqrt{1+\sinh^2\chi}$.
+
+\begin{eqnarray*}
+	\mathrm d\bm p &=& \bm{\hat e_t}\mathrm dt + \frac{a}{\sqrt{1+r^2}} \bm{\hat e_r} \mathrm dr + a r \mathrm d\theta + a r \sin\theta \mathrm d\phi
+\end{eqnarray*}
+
+
+\begin{eqnarray*}
+	g_{tt} &=& -1 \\
+	g_{rr} &=& \frac{a^2 }{1 + r^2} \\
+	g_{\theta\theta} &=& a^2 r^2 \\
+	g_{\phi\phi} &=& a^2 r^2 \sin\theta
+\end{eqnarray*}
+
+
+
+%%%%%%%%%   11.30    %%%%%%%%%
+\item
+
+
+Coordinates transform as
+\begin{eqnarray*}
+	r &\rightarrow& k r \\
+	a &\rightarrow& \frac{a}{k},   \qquad \mathrm{k \neq 0} \\
+	\theta \rightarrow & \theta \\
+	\phi \rightarrow & \phi
+\end{eqnarray*}
+
+
+
+%%%%%%%%    11.31   %%%%%%%%%
+\item
+
 
 
 
