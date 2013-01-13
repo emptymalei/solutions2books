@@ -930,7 +930,7 @@ It's good to know that the observable universe is about $10^{26}\mathrm m$.
 
 
 
-\end{comment}
+
 %%%%%%%%%%    11.27      %%%%%%%%%%
 \item
 
@@ -1018,21 +1018,116 @@ Since we have $\sinh\chi = r$, the derivative $\mathrm d\chi = \mathrm dr/\cosh\
 
 
 Coordinates transform as
+
+\begin{equation*}
+\begin{array}{llll}
+	r & \rightarrow &  \sqrt{\vert k \vert} r ,   \qquad   &\mathrm{k \neq 0} \\
+	a &\rightarrow& \frac{a}{\sqrt{\vert k\vert} },   \qquad & \mathrm{k \neq 0} \\
+	k &\rightarrow & \frac{k}{\vert k \vert} & \\
+	\theta &\rightarrow & \theta  & \\
+	\phi &\rightarrow & \phi & 
+\end{array}
+\end{equation*}
+
+
+
+
+
+
+\end{comment}
+%%%%%%%%    11.31   %%%%%%%%%
+\item
+
+Defination of $\Gamma^\sigma_{\mu\nu}$
+\begin{equation*}
+	\Gamma^\sigma_{ \mu\nu} =  \frac12 g^{\sigma \rho}( g_{\rho\mu,\nu} + g_{\nu\rho,\mu} - g_{\mu\nu,\rho} )
+\end{equation*}
+
 \begin{eqnarray*}
-	r &\rightarrow& k r \\
-	a &\rightarrow& \frac{a}{k},   \qquad \mathrm{k \neq 0} \\
-	\theta \rightarrow & \theta \\
-	\phi \rightarrow & \phi
+	\Gamma^1_{22} &=& \frac 1 2 g^{1\rho} ( g_{\rho 2,2} + g_{2\rho,2} - g_{22,\rho}) \\
+	&=&\frac 1 2 \frac{1-kr^2}{a^2} ( 0 + 0 - 2a^2 r ) \\
+	&=& -r(1-kr^2) \\
+	\Gamma^1_{33} &=& \frac 1 2 g^{1\rho}( g_{\rho 3,3} + g_{3\rho,3} - g_{33,\rho} ) \\
+	&=& \frac 1 2 \frac{1-kr^2}{a^2}( 0+ 0 - 2 a^2 r \sin^2\theta ) \\
+	&=& -r(1-kr^2)\sin^2\theta
 \end{eqnarray*}
 
 
 
-%%%%%%%%    11.31   %%%%%%%%%
+%%%%%%%   11.32   %%%%%%%%%%%
 \item
 
+\begin{eqnarray*}
+	\Gamma^2_{12} &=& \frac 1 2 g^{2\rho}( g_{\rho 1,2} + g_{2\rho,1} - g_{12,\rho} ) \\
+	&=& \frac 1 2 \frac{1}{a^2r^2} ( 0 + 2a^2 r - 0 )\\
+	&=& \frac 1 r \\
+	\Gamma^3_{13} &=& \frac 1 2 g^{3\rho} ( g_{\rho 1,3} + g_{3\rho,1} - g_{13,\rho} ) \\
+	&=& \frac 1 2 \frac{1}{a^2 r^2 \sin^2\theta } ( 0 + 2 a^2 r \sin^2\theta - 0 )\\
+	&=&\frac 1 r
+\end{eqnarray*}
+
+The two lower indices are symmetric.
+\begin{eqnarray*}
+	\Gamma^2_{\phantom 221}=\Gamma^2_{\phantom 212} &=& \frac 1 r \\
+	\Gamma^3_{\phantom 331}= \Gamma ^3_{\phantom 313} &=&\frac 1 r
+\end{eqnarray*}
 
 
 
+
+
+%%%%%%%  11.33   %%%%%%%%%%
+\item
+
+{\color{red} Page491, equation 401, $\Gamma^3_{23} = \cos\theta = \Gamma^3_{32}$ should be $\Gamma^3_{23} = \cot\theta = \Gamma^3_{32}$}
+
+
+\begin{eqnarray*}
+	\Gamma^2_{33} &=& \frac12 g^{2\rho}( g_{\rho 3,3} + g_{3\rho,3} - g_{33,\rho} ) \\
+	&=& \frac 12 \frac{1}{a^2r^2} ( 0 + 0 - 2a^2r^2\sin\theta\cos\theta ) \\
+	&=& - \sin\theta\cos\theta \\
+	\Gamma^3_{23} &=& \frac 1 2 g^{3\rho} ( g_{\rho 2 ,3} + _{3\rho,2} - g_{23,\rho} ) \\
+	&=& \frac 1 2 \frac{1}{a^2r^2\sin^2\theta} ( 0 + 2a^2r^2 \cos\theta\sin\theta - 0 ) \\
+	&=& \cot\theta
+\end{eqnarray*}
+
+The two lower indices are symmetric.
+\begin{equation*}
+	\Gamma^3_{32} = \Gamma^2_{23} = \cot\theta
+\end{equation*}
+
+
+
+
+%%%%%%%%%%%%%   11.34     %%%%%%%%
+\item
+
+Ricci tensor is
+\begin{equation*}
+R_{ij} = 	\begin{pmatrix}
+	-3\ddot a/a & 0 & 0 & 0 \\
+	0 & 2\dot a ^2 + a\ddot a & 0 & 0\\
+	0 & 0 &r^2 (2\dot a^2 + a\ddot a) & 0 \\
+	0 & 0 & 0 & r^2\sin^2\theta ( 2\dot a^2 + a\ddot a)
+	\end{pmatrix}
+\end{equation*}
+
+
+
+$11$ component of field equation
+\begin{eqnarray*}
+	&& R_{11} = -\frac{8\pi G}{c^4} ( T_{11} - \frac{T}{2}g_{11} ) \\
+\Rightarrow &&	R_{11}= -\frac{8\pi G}{c^4} ( p g_{11} - \frac{1}{2} (-\rho + 3p) g_{11} ) \\
+\Rightarrow && R_{11} = - \frac{8\pi G}{c^4}\frac 1 2 (\rho - p) \frac{a^2 r^2}{1 - k r^2} \\
+\Rightarrow && \frac{A}{1-kr^2}\frac{1-kr^2}{a^2r^2} = \frac{4\pi G}{c^4} (\rho - p) \\
+\Rightarrow && \frac{\ddot a}{a} + 2 \left(\frac{\dot a}{a}\right)^2 + 2 \frac{k}{a^2} = 4\pi G (\rho - p)
+\end{eqnarray*}
+
+
+
+
+%%%%%%%%%   11.35  %%%%%%%%%
+\item
 
 
 
