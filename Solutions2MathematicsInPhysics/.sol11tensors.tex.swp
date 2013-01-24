@@ -114,7 +114,7 @@
 
 
 
-
+\begin{comment}
 
 
 
@@ -1313,7 +1313,7 @@ Differentiate of this identity yields
 
 
 
-
+\end{comment}
 
 %%%%%%%%%% 11.42  %%%%%%
 \item
@@ -1322,9 +1322,28 @@ Differentiate of this identity yields
 
 
 
+%%%%%%%%%%%  11.43   %%%%%%%%%%%
+\item
+
+The derivative of
+\begin{eqnarray*}
+	e^{a\dag}\cdot e_c = \delta^a_c
+\end{eqnarray*}
+shows
+\begin{eqnarray*}
+	e^{a\dag}\cdot e_{c,i} + e^{a\dag,i}\cdot e_c &=& 0.  \\
+\end{eqnarray*}
+
+
+That is
+\begin{eqnarray*}
+	e^{a\dag}\cdot e_{c,i} = - e^{a\dag}\cdot e_{c}
+\end{eqnarray*}
 
 
 
+%%%%%%%%%  11.44 %%%%%%%%%%%%
+\item
 
 
 
