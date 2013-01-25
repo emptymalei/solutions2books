@@ -116,8 +116,115 @@
 
 
 %%%%%%%%%%%   1 %%%%%%%
+%%16.1 Derive the multiple gaussian integral (17.8) from (5.178). %%%%
+
+\item
+\begin{eqnarray*}
+	&&\int_{-\infty}^\infty \exp\left(\sum_i - r_i x_i^2 + c_i x_i\right) \prod_{i=1}^N \mathrm dx_i \\
+	&=& \prod_i \int_{-\infty}^\infty \exp\left( -r_ix_i^2 + c_i x_i \right)\mathrm dx_i \\
+	&=& \int_{-\infty}^{\infty} \prod_i \left( \exp\left( -r_i (x_i - \frac{c_i}{2r_i})^2 \right)\exp\left( \frac{c_i^2}{4r_i} \right)\mathrm dx_i \right) \\
+	&=& \prod _{i=1}^N \sqrt{\frac{\pi}{r_i}} \exp\left( \frac14 \sum_i \frac{c_i^2}{r_i} \right)
+\end{eqnarray*}
+
+
+
+
+
+%%%%%   16.2  %%%%%
+%%%%   Derive the multiple gaussian integral (17.12) from (5.177).
 \item
 
+The matrix form of
+\begin{eqnarray*}
+	&&\int_{-\infty}^{\infty} \exp\left( \sum_i ( -i a_i x_i^2  + i b_i x_i  )\prod _i \mathrm d x_i \right) \\
+	&=& \prod_{i=1}^N \sqrt{\frac{\pi}{ia_i}}\exp\left( \frac{i}{4} \sum_i \frac{b_i^2}{a_i} \right)
+\end{eqnarray*}
+is
+\begin{eqnarray*}
+	\int_{-\infty}^{\infty} \exp\left( -i X^T A X + i B X \right) \prod_{i=1}^N \mathrm dx_i &=& \sqrt{\frac{\pi^N}{\det(iA)}}  \exp\left( \frac{i}{4} B^T A^{-1}B \right)
+\end{eqnarray*}
+
+We know that $A = O^T S O$,
+\begin{eqnarray*}
+	\int_{-\infty}^\infty \exp\left( -i X^T O^T S O X + i B O^T O X \right)\prod_{i=1}^N \mathrm dx_i &=& \sqrt{\frac{\pi^N}{\det(S)}} \exp\left( \frac i 4  B^T O^T O A^{-1} O^T O B \right)
+\end{eqnarray*}
+
+Since $Y=OX$, $D=OB$,
+\begin{eqnarray*}
+	\int_{-\infty}^\infty \exp\left( -i Y^T S Y +  i D^T Y \right)\prod_{i=1}^N \mathrm dy_i &=& \sqrt{\frac{\pi^N}{\det(S)}} \exp\left( \frac i 4 D^T S^{-1} D \right) 
+\end{eqnarray*}
+
+
+
+
+
+%%%%%%%  16.3 %%%%
+%%%  Show that the vector Y that makes the argument of the multiple gaussian integral (17.12) stationary is given by (17.13), and that the multiple gaussian integral (17.12) is equal to its exponential evaluated at its stationary point Y apart from a prefactor involving the determinant det iS.  %%%%%%%%
+\item
+
+
+
+
+%%%%%%%  16.4  %%%%%%%%%%
+\item
+
+
+
+
+
+
+%%%%%%%  16.5  %%%%%%%%%%
+\item
+\begin{eqnarray*}
+	\langle q \vert e^{-itH} \rangle &=& \int\int \mathrm dp' \mathrm dp'' \langle q\vert p' \rangle \langle p'  \vert e^{-i p^2/(2m\hbar) t} \vert p''\rangle \langle p'' \vert 0 \rangle \\
+	&=& \int \mathrm dp' \frac{1}{(2\hbar \pi)^3} e^{-\frac{-it}{2m\hbar} p'^2} e^{iqp/\hbar} \\
+	&=& \frac{1}{(2\pi \hbar)^3} \sqrt{\frac{\pi^3}{(it/(2 m\hbar))}} e^{2mq^2/(2\hbar t)} \\
+	&=& \left( \frac{m}{2\pi i\hbar t} \right)^{3/2} e^{imq^2/(2\hbar t)}
+\end{eqnarray*}
+
+
+
+%%%%%%%  16.6  %%%%%%%%%%
+\item
+
+
+
+
+
+
+
+%%%%%%%  16.7  %%%%%%%%%%
+\item
+
+\begin{eqnarray*}
+	S[q] &=& \int_0^t \left( \frac 12 m\dot q^2 - \frac 1 2 m \omega^2  q^2 \right)\mathrm dt' \\
+	&=& \int_0^t \frac 1 2 m\left( (-\omega q' \sin\omega t' + \dot q_0 \cos\omega t')^2 -  \omega^2 (q' \cos\omega t' + \frac{\dot q^2}{\omega} \sin\omega t')^2 \right)\mathrm d t'\\
+	&=& \frac{m\omega}{2\sin(\omega t)} \left( (q'^2 + q''^2)\cos\omega t - 2q'q'' \right)
+\end{eqnarray*}
+
+
+
+
+
+
+
+%%%%%%%  16.8  %%%%%%%%%%
+\item
+
+\begin{eqnarray*}
+	S[\delta q] &=& \int_0^t\mathrm dt' \left( \frac12 m \left( \sum_{n=1} a_n n\pi/t\cos\frac{n\pi t'}{t} \right)^2 -\frac12 m\omega^2\left( \sum_{n=1} a_n \sin\frac{n\pi t'}{t} \right)^2 \right) \\
+	&=& \int_0^t \mathrm dt'\left( \frac12 m \sum_{n=1} a_n^2 \frac{n^2\pi^2}{t^2} \cos^2\frac{n\pi t'}{t} - \frac12 m\omega^2 \sum_{n=0} a_n^2 \sin^2\frac{n\pi t'}{t}  \right) \\
+	&=& \sum_{n=1} \frac12 m a_n^2 \int_0^t \mathrm dt' \left( \frac{n^2 \pi^2}{t^2}\cos^2\frac{n\pi t'}{t} - \omega^2 \sin^2\frac{n\pi t'}{t}\right) \\
+	&=& \sum_{n=1} \frac{mt}{4} a_n^2 \left( n^2 \pi^2/t^2 - \omega^2 \right)
+\end{eqnarray*}
+
+
+
+
+
+
+%%%%%%%  16.9  %%%%%%%%%%
+\item
 
 
 
