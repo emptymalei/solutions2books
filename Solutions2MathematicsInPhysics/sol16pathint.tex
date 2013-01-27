@@ -81,7 +81,7 @@
 
 %%%%%% Redefine some math commands and environments. %%%%
 
-\newcommand{\dd}{\mathrm d}
+\newcommand{\dd}{ d }
 
 %\newcommand{\HH}{\mathcal H}
 
@@ -120,9 +120,9 @@
 
 \item
 \begin{eqnarray*}
-	&&\int_{-\infty}^\infty \exp\left(\sum_i - r_i x_i^2 + c_i x_i\right) \prod_{i=1}^N \mathrm dx_i \\
-	&=& \prod_i \int_{-\infty}^\infty \exp\left( -r_ix_i^2 + c_i x_i \right)\mathrm dx_i \\
-	&=& \int_{-\infty}^{\infty} \prod_i \left( \exp\left( -r_i (x_i - \frac{c_i}{2r_i})^2 \right)\exp\left( \frac{c_i^2}{4r_i} \right)\mathrm dx_i \right) \\
+	&&\int_{-\infty}^\infty \exp\left(\sum_i - r_i x_i^2 + c_i x_i\right) \prod_{i=1}^N  d x_i \\
+	&=& \prod_i \int_{-\infty}^\infty \exp\left( -r_ix_i^2 + c_i x_i \right) d x_i \\
+	&=& \int_{-\infty}^{\infty} \prod_i \left( \exp\left( -r_i (x_i - \frac{c_i}{2r_i})^2 \right)\exp\left( \frac{c_i^2}{4r_i} \right) d x_i \right) \\
 	&=& \prod _{i=1}^N \sqrt{\frac{\pi}{r_i}} \exp\left( \frac14 \sum_i \frac{c_i^2}{r_i} \right)
 \end{eqnarray*}
 
@@ -136,22 +136,22 @@
 
 The matrix form of
 \begin{eqnarray*}
-	&&\int_{-\infty}^{\infty} \exp\left( \sum_i ( -i a_i x_i^2  + i b_i x_i  )\prod _i \mathrm d x_i \right) \\
+	&&\int_{-\infty}^{\infty} \exp\left( \sum_i ( -i a_i x_i^2  + i b_i x_i  )\prod _i  d  x_i \right) \\
 	&=& \prod_{i=1}^N \sqrt{\frac{\pi}{ia_i}}\exp\left( \frac{i}{4} \sum_i \frac{b_i^2}{a_i} \right)
 \end{eqnarray*}
 is
 \begin{eqnarray*}
-	\int_{-\infty}^{\infty} \exp\left( -i X^T A X + i B X \right) \prod_{i=1}^N \mathrm dx_i &=& \sqrt{\frac{\pi^N}{\det(iA)}}  \exp\left( \frac{i}{4} B^T A^{-1}B \right)
+	\int_{-\infty}^{\infty} \exp\left( -i X^T A X + i B X \right) \prod_{i=1}^N  d x_i &=& \sqrt{\frac{\pi^N}{\det(iA)}}  \exp\left( \frac{i}{4} B^T A^{-1}B \right)
 \end{eqnarray*}
 
 We know that $A = O^T S O$,
 \begin{eqnarray*}
-	\int_{-\infty}^\infty \exp\left( -i X^T O^T S O X + i B O^T O X \right)\prod_{i=1}^N \mathrm dx_i &=& \sqrt{\frac{\pi^N}{\det(S)}} \exp\left( \frac i 4  B^T O^T O A^{-1} O^T O B \right)
+	\int_{-\infty}^\infty \exp\left( -i X^T O^T S O X + i B O^T O X \right)\prod_{i=1}^N  d x_i &=& \sqrt{\frac{\pi^N}{\det(S)}} \exp\left( \frac i 4  B^T O^T O A^{-1} O^T O B \right)
 \end{eqnarray*}
 
 Since $Y=OX$, $D=OB$,
 \begin{eqnarray*}
-	\int_{-\infty}^\infty \exp\left( -i Y^T S Y +  i D^T Y \right)\prod_{i=1}^N \mathrm dy_i &=& \sqrt{\frac{\pi^N}{\det(S)}} \exp\left( \frac i 4 D^T S^{-1} D \right) 
+	\int_{-\infty}^\infty \exp\left( -i Y^T S Y +  i D^T Y \right)\prod_{i=1}^N  d y_i &=& \sqrt{\frac{\pi^N}{\det(S)}} \exp\left( \frac i 4 D^T S^{-1} D \right) 
 \end{eqnarray*}
 
 
@@ -176,8 +176,8 @@ Since $Y=OX$, $D=OB$,
 %%%%%%%  16.5  %%%%%%%%%%
 \item
 \begin{eqnarray*}
-	\langle q \vert e^{-itH} \rangle &=& \int\int \mathrm dp' \mathrm dp'' \langle q\vert p' \rangle \langle p'  \vert e^{-i p^2/(2m\hbar) t} \vert p''\rangle \langle p'' \vert 0 \rangle \\
-	&=& \int \mathrm dp' \frac{1}{(2\hbar \pi)^3} e^{-\frac{-it}{2m\hbar} p'^2} e^{iqp/\hbar} \\
+	\langle q \vert e^{-itH} \rangle &=& \int\int  d p'  d p'' \langle q\vert p' \rangle \langle p'  \vert e^{-i p^2/(2m\hbar) t} \vert p''\rangle \langle p'' \vert 0 \rangle \\
+	&=& \int  d p' \frac{1}{(2\hbar \pi)^3} e^{-\frac{-it}{2m\hbar} p'^2} e^{iqp/\hbar} \\
 	&=& \frac{1}{(2\pi \hbar)^3} \sqrt{\frac{\pi^3}{(it/(2 m\hbar))}} e^{2mq^2/(2\hbar t)} \\
 	&=& \left( \frac{m}{2\pi i\hbar t} \right)^{3/2} e^{imq^2/(2\hbar t)}
 \end{eqnarray*}
@@ -197,8 +197,8 @@ Since $Y=OX$, $D=OB$,
 \item
 
 \begin{eqnarray*}
-	S[q] &=& \int_0^t \left( \frac 12 m\dot q^2 - \frac 1 2 m \omega^2  q^2 \right)\mathrm dt' \\
-	&=& \int_0^t \frac 1 2 m\left( (-\omega q' \sin\omega t' + \dot q_0 \cos\omega t')^2 -  \omega^2 (q' \cos\omega t' + \frac{\dot q^2}{\omega} \sin\omega t')^2 \right)\mathrm d t'\\
+	S[q] &=& \int_0^t \left( \frac 12 m\dot q^2 - \frac 1 2 m \omega^2  q^2 \right) d t' \\
+	&=& \int_0^t \frac 1 2 m\left( (-\omega q' \sin\omega t' + \dot q_0 \cos\omega t')^2 -  \omega^2 (q' \cos\omega t' + \frac{\dot q^2}{\omega} \sin\omega t')^2 \right) d  t'\\
 	&=& \frac{m\omega}{2\sin(\omega t)} \left( (q'^2 + q''^2)\cos\omega t - 2q'q'' \right)
 \end{eqnarray*}
 
@@ -212,9 +212,9 @@ Since $Y=OX$, $D=OB$,
 \item
 
 \begin{eqnarray*}
-	S[\delta q] &=& \int_0^t\mathrm dt' \left( \frac12 m \left( \sum_{n=1} a_n n\pi/t\cos\frac{n\pi t'}{t} \right)^2 -\frac12 m\omega^2\left( \sum_{n=1} a_n \sin\frac{n\pi t'}{t} \right)^2 \right) \\
-	&=& \int_0^t \mathrm dt'\left( \frac12 m \sum_{n=1} a_n^2 \frac{n^2\pi^2}{t^2} \cos^2\frac{n\pi t'}{t} - \frac12 m\omega^2 \sum_{n=0} a_n^2 \sin^2\frac{n\pi t'}{t}  \right) \\
-	&=& \sum_{n=1} \frac12 m a_n^2 \int_0^t \mathrm dt' \left( \frac{n^2 \pi^2}{t^2}\cos^2\frac{n\pi t'}{t} - \omega^2 \sin^2\frac{n\pi t'}{t}\right) \\
+	S[\delta q] &=& \int_0^t d t' \left( \frac12 m \left( \sum_{n=1} a_n n\pi/t\cos\frac{n\pi t'}{t} \right)^2 -\frac12 m\omega^2\left( \sum_{n=1} a_n \sin\frac{n\pi t'}{t} \right)^2 \right) \\
+	&=& \int_0^t  d t'\left( \frac12 m \sum_{n=1} a_n^2 \frac{n^2\pi^2}{t^2} \cos^2\frac{n\pi t'}{t} - \frac12 m\omega^2 \sum_{n=0} a_n^2 \sin^2\frac{n\pi t'}{t}  \right) \\
+	&=& \sum_{n=1} \frac12 m a_n^2 \int_0^t  d t' \left( \frac{n^2 \pi^2}{t^2}\cos^2\frac{n\pi t'}{t} - \omega^2 \sin^2\frac{n\pi t'}{t}\right) \\
 	&=& \sum_{n=1} \frac{mt}{4} a_n^2 \left( n^2 \pi^2/t^2 - \omega^2 \right)
 \end{eqnarray*}
 
@@ -225,6 +225,166 @@ Since $Y=OX$, $D=OB$,
 
 %%%%%%%  16.9  %%%%%%%%%%
 \item
+
+
+When $q'=0$ and $q''=q$, it becomes
+\begin{eqnarray*}
+	\langle q \vert e^{-i t H/\hbar } \vert 0 \rangle &=& \sqrt{\frac{m\omega}{2\pi i \hbar \sin\omega t}} \exp\left[ i\frac{m\omega[ q^2 \cos\omega t ]}{2\hbar \sin\omega t} \right]
+\end{eqnarray*}
+
+In the limit of $t\rightarrow 0$, the trigonometric functions used in our calculation becomes $\sin\omega t \rightarrow \omega t$ and $\cos\omega t \rightarrow 1$.
+
+\begin{eqnarray*}
+	\lim_{t\rightarrow 0}\langle q \vert e^{-i t H/\hbar } \vert 0 \rangle &=& \sqrt{\frac{m}{2\pi i \hbar t}} \exp\left( \frac{imq^2}{2\hbar t} \right)
+\end{eqnarray*}
+
+
+
+
+
+%%%%%%%  16.10  %%%%%%%%%%
+\item
+
+
+
+
+%%%%%%%  16.11  %%%%%%%%%%
+\item
+
+\begin{eqnarray*}
+	S_e[q] &=& \int_0^{\beta} \left[ \frac12 m \dot q^2 +\frac12 m\omega^2 q^2 \right] d t \\
+	&=& \int_0^{\beta} \frac12 m \left[ (A\omega e^{\omega t} - B \omega e^{-\omega t})^2 + \omega ( A e^{\omega t} + B e^{-\omega t})^2 \right] \\
+	&=& \frac{1}{2} m\omega^2 \int_0^\beta 2( A^2 e^{2\omega t} + B^2 e^{-2 \omega t}  ) d t \\
+	&=& m\omega^2 \left[ A^2 (e^{2\omega t} - 1) - B^2(e^{-2\omega t} - 1) \right]
+\end{eqnarray*}
+
+
+
+%%%%%%%  16.12  %%%%%%%%%%
+\item
+
+\begin{eqnarray*}
+	S_0[\phi] &=& \int \frac12 [ -\partial_a \phi(x)\partial^a \phi(x) -m^2 \phi(x)]  d ^4x \\
+	&=& \int \frac12 \left[ -\int ip_a e^{ip' x}\tilde \phi(p')\frac{1}{(2\pi)^4} d ^4p' \int\left(-ip_a e^{-ip'' x} \tilde \phi(-p'')\right) \frac{ d ^4p''}{(2\pi)^4}\right. \\
+	&& \left. - m^2\int\int \frac{ d p'}{(2\pi)^4} \frac{ d p''}{(2\pi)^4} e^{ip'-p''}x\tilde \phi(p')\tilde\phi(-p'')  \right] d ^4 x \\
+	&=& - \int  d ^4 x e^{i(p'-p'')x}\int\frac12 (p^2 + m^2)\tilde \phi (p')\tilde\phi(-p'')  \frac{ d ^4 p'}{(2\pi)^4}\frac{ d ^4p''}{(2\pi)^4} \\
+	&=& - \delta(p'-p'')\int \frac12 (p^2 + m^2) \tilde\phi(p')\tilde\phi(-p'') \frac{ d ^4 p'}{(2\pi)^4}\frac{ d ^4p''}{(2\pi)^4} \\
+	&=& -\frac12 \int\vert \tilde\phi(p)\vert^2 (p^2 + m^2) \frac{ d ^4 p}{(2\pi)^4}
+\end{eqnarray*}
+
+
+
+%%%%%%%  16.13  %%%%%%%%%%
+\item
+
+\begin{eqnarray*}
+	&&\lim_{\epsilon\rightarrow 0+}\epsilon \int_{-\infty}^{\infty}e^{-\epsilon\vert t \vert}  dt \\
+	&=&\lim_{\epsilon \rightarrow 0+} \left(  \epsilon \int_{-\infty}^0 f(t)e^{\epsilon t} dt + \epsilon \int_0^\infty f(t)e^{-\epsilon t} dt \right) \\
+	&=& \lim_{\epsilon \rightarrow 0+} \left( \int_{-\infty}^0 f(t) de^{\epsilon t} - \int_0^\infty f(t) de^{-\epsilon t} \right) \\
+	&=& \lim_{\epsilon \rightarrow 0+}  \left( f(t)e^{\epsilon t}\vert_{-\infty}^0 - \int_{-\infty}^0 e^{\epsilon t} df(t) - f(t)e^{-\epsilon t}\vert_0^{\infty} + \int_0^\infty e^{-\epsilon t}df(t)    \right) \\
+	&=& \lim_{\epsilon\rightarrow 0} \left(  2f(0) + \int_0^\infty e^{-\epsilon t} d f(t) - \int_{-\infty}^0 e^{\epsilon t} d f(t)  \right) \\
+	&=& 2f(0) + f(\infty) - f(0) - f(0) + f(-\infty) \\
+	&=& f(\infty) + f(-\infty)
+\end{eqnarray*}
+
+
+
+
+
+
+
+%%%%%%%  16.14  %%%%%%%%%%
+\item
+
+{\color{red} Not Finished!!! Check out it after the other problems are solved.}
+
+Fourier transform of $\phi(\vec x,t)$ and $\phi(p)$ are
+\begin{eqnarray*}
+	\tilde \phi(\vec p,t) &=& \int e^{-i\vec p\cdot \vec x} \phi(\vec x,t) d^3 x
+\end{eqnarray*}
+\begin{eqnarray*}
+	\phi(\vec x,t) &=& \int e^{i\vec p\cdot \vec x} e^{-ip_0 t}\phi(p')\frac{d^4 p'}{(2\pi)^4}
+\end{eqnarray*}
+
+Then
+\begin{eqnarray*}
+	\tilde \phi(\vec p,t)&=& \iint e^{-i\vec p\cdot \vec x} e^{-i \vec p'\cdot\vec x}e^{-i p_0 t} \phi(p') \frac{d^4}{(2\pi)^4} d^3 x \\
+	&=& \iint e^{-i(\vec p - \vec p')\cdot \vec x}e^{-ip_0 t} \phi(p') \frac{d^4p'}{(2\pi)^4} d^3 x
+\end{eqnarray*}
+
+
+
+
+
+%%%%%%%  16.15  %%%%%%%%%%
+\item
+
+\begin{eqnarray*}
+	S_0 [\phi,\epsilon,j]&=& -\frac12 \int \left[ \vert \tilde \phi(p) \vert^2 (p^2 + m^2 -i\epsilon) - \tilde j^*(p)\tilde\phi(p) - \tilde \phi^*(p)\tilde j(p) \right]\frac{d^4 p}{(2\pi)^4} \\
+	&=& -\frac12 \int\left[ \left(\tilde \psi(p) + \frac{\tilde j(p)}{p^2 + m^2 - i\epsilon}\right)^* \left(\tilde \psi(p) + \frac{\tilde j(p)}{p^2 + m^2 - i\epsilon}\right) \left(p^2+m^2-i\epsilon\right) \right.\\
+	&&\left. - \tilde j^*(p)\left(\tilde \psi(p) + \frac{\tilde j(p)}{p^2 + m^2 - i\epsilon}\right) - \left( \tilde\psi^*(p) + \frac{\tilde j^*(p)}{p^2+m^2+i\epsilon} \right)\tilde j(p) \right]\frac{d^4}{(2\pi)^4} \\
+	&=& -\frac12 \int\left[ \vert \tilde \psi(p)\vert^2 (p^2 + m^2 - i\epsilon ) - \frac{\tilde j^*(p) \tilde j(p) }{ p^2 +m^2 -i\epsilon} \right] \frac{d^4p}{(2\pi)^4} \\
+	&=& S_0[\psi,\epsilon] + \frac12 \int\frac{\tilde j^* (p) \tilde j(p)}{p^2 + m^2 - i\epsilon} \frac{d^4p}{(2\pi)^4}
+\end{eqnarray*}
+
+
+
+%%%%%%%  16.16  %%%%%%%%%%
+\item
+
+\begin{eqnarray*}
+	Z_0[j] &=& \frac{ \int \exp\left[ i\int j(x)\phi(x)d^4x  \right] e^{iS_0[\phi,\epsilon] } D\phi }{ \int e^{i S_0[\phi,\epsilon]} D\phi } \\
+	&=& \frac{\int e^{iS_0[\phi,\epsilon,j] }  D\phi  }{\int e^{i S_0[\phi,\epsilon]} D\phi} \\
+	&=& \frac{ \int e^{i S_0[\psi,\epsilon]} D\psi \cdot e^{\frac i2 \int \frac{\tilde j^*(p) \tilde j(p)}{p^2+m^2-i\epsilon} \frac{d^4p}{(2\pi)^4}  }  }{ \int e^{i S_0[\psi,\epsilon]} D\psi}  \\
+	&=& \exp\left[ \frac{i}{2} \int \frac{\vert\tilde j(p)\vert^2}{p^2 + m^2 -i\epsilon} \frac{d^4p}{(2\pi)^4} \right]
+\end{eqnarray*}
+
+
+
+
+
+%%%%%%%  16.17  %%%%%%%%%%
+\item
+
+Applying
+\begin{eqnarray*}
+	\tilde j(p) &=& \int e^{-ipx}j(x)d^4x \\
+	\tilde j^*(p)&=& \int e^{ipx'} j(x')d^4x'
+\end{eqnarray*}
+to $Z_0[j]$, we get
+\begin{eqnarray*}
+	Z_0[j]&=& \exp\left[ \frac i2 \int \frac{\iint d^4x d^4 x' e^{ip(x-x')}j(x)j(x')}{ p^2 + m^2 -i\epsilon } \frac{d^4 p}{(2\pi)^4} \right] \\
+	&=& \exp\left[ \frac i 2 \int j(x)\Delta (x-x')j(x') d^4x d^4x' \right],
+\end{eqnarray*}
+in which $\Delta(x-x')$ is the Feynmann's propagrator.
+
+
+
+
+
+
+%%%%%%%  16.17  %%%%%%%%%%
+\item
+
+\begin{eqnarray*}
+	&&\left.\frac{1}{i^4}\frac{\delta^4 Z_0[j]}{\delta_j(x_1)\delta_j(x_2) \delta_j(x_3) \delta_j(x_4)}\right\vert_{j=0} \\
+	&=& \left( Z_0[j]     \right)
+\end{eqnarray*}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

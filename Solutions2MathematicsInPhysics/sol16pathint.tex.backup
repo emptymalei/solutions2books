@@ -1,0 +1,306 @@
+% !TEX program = xelatex
+
+%This document had would had been used on Ways to Singularity, which is a website that supports MathJax. So some html elements may occur in this document. DELETE THIS when publishing. (If you are not very clear on the grammar I used here, read the academic publication called Time Traveller's Handbook of 1001 Tense Formations by Dr Dan Streetmentioner, which had would had been publish in year 220010 of Gregorian Calendar.)
+
+\documentclass[12pt,a4paper]{article}
+
+
+%%%%% Page settings  %%%%%
+\addtolength{\textheight}{2.0cm}
+\addtolength{\voffset}{-2cm}
+\addtolength{\hoffset}{-1.0cm}
+\addtolength{\textwidth}{2.0cm}
+
+%\allowdisplaybreaks
+
+
+%%%%%% Math %%%%%%%
+\usepackage{amsthm,amsfonts,amssymb,bm}
+\usepackage{mathrsfs}
+\usepackage[fleqn]{amsmath}
+\usepackage{subeqnarray}
+
+
+
+
+%%%%% MISC  %%%%%%
+
+%\usepackage{color}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{url}
+\usepackage{ulem}
+\usepackage{indentfirst}   % Indent first line of a paragraph
+%\usepackage{textcomp}
+
+\usepackage{enumerate}
+
+
+%%%%%%   Here is the configuration for chinese. setmainfont is the default font of the text.
+%\usepackage[cm-default]{fontspec}
+%\usepackage{xunicode}
+%\usepackage{xltxtra}
+%\setmainfont{Arial}
+%\setsansfont[BoldFont=Arial]{KaiTi_GB2312}
+%\setmonofont{NSimSun}
+
+
+%\XeTeXlinebreaklocale "zh"
+%\XeTeXlinebreakskip = 0pt plus 1pt
+
+% Redefine some fonts.
+%\newfontfamily\heiti{"黑体"}
+%\newfontfamily\fs{"仿宋"}
+%\newfontfamily\yahei{"微软雅黑"}
+
+
+%%%%%%% Figure, Diagram, Caption settings  %%%%%
+%\usepackage{tikz}
+%\usetikzlibrary{mindmap,trees}
+
+\usepackage{graphicx}
+%\usepackage{graphics}
+%\usepackage[hang,small,bf]{caption}
+%\setlength{\captionmargin}{50pt}
+
+
+%\graphicspath{{Figures/}
+
+
+
+%includeonly{}
+\usepackage{comment}
+
+\begin{document}
+%\title{TITLE}
+%\author{{\bf MA} Lei  \\
+%@ Interplanetary Immigration Agency \\
+%{\small\em \copyright \ Draft date \today}}
+%\date{}
+%\maketitle
+
+
+%%%%%% Redefine some math commands and environments. %%%%
+
+\newcommand{\dd}{\mathrm d}
+
+%\newcommand{\HH}{\mathcal H}
+
+%\newcommand{\CN}{{\it Cosmologia Notebook}}
+
+%\newenvironment{eqnset}
+%{\begin{equation}\left \bracevert \begin{array}{l}}
+%{\end{array} \right. \end{equation}}
+
+%\newenvironment{eqn}
+%{\begin{equation}\left \bracevert \begin{array}{l}}
+%{\end{array} \right. \end{equation}}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%    Let's Start Typing     %%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+
+%%%%%%%%  Tensors and Local Symmetries   %%%%%%%%%%
+\section{Path Integral}
+
+\begin{enumerate}
+
+
+
+
+
+
+
+%%%%%%%%%%%   1 %%%%%%%
+%%16.1 Derive the multiple gaussian integral (17.8) from (5.178). %%%%
+
+\item
+\begin{eqnarray*}
+	&&\int_{-\infty}^\infty \exp\left(\sum_i - r_i x_i^2 + c_i x_i\right) \prod_{i=1}^N \mathrm dx_i \\
+	&=& \prod_i \int_{-\infty}^\infty \exp\left( -r_ix_i^2 + c_i x_i \right)\mathrm dx_i \\
+	&=& \int_{-\infty}^{\infty} \prod_i \left( \exp\left( -r_i (x_i - \frac{c_i}{2r_i})^2 \right)\exp\left( \frac{c_i^2}{4r_i} \right)\mathrm dx_i \right) \\
+	&=& \prod _{i=1}^N \sqrt{\frac{\pi}{r_i}} \exp\left( \frac14 \sum_i \frac{c_i^2}{r_i} \right)
+\end{eqnarray*}
+
+
+
+
+
+%%%%%   16.2  %%%%%
+%%%%   Derive the multiple gaussian integral (17.12) from (5.177).
+\item
+
+The matrix form of
+\begin{eqnarray*}
+	&&\int_{-\infty}^{\infty} \exp\left( \sum_i ( -i a_i x_i^2  + i b_i x_i  )\prod _i \mathrm d x_i \right) \\
+	&=& \prod_{i=1}^N \sqrt{\frac{\pi}{ia_i}}\exp\left( \frac{i}{4} \sum_i \frac{b_i^2}{a_i} \right)
+\end{eqnarray*}
+is
+\begin{eqnarray*}
+	\int_{-\infty}^{\infty} \exp\left( -i X^T A X + i B X \right) \prod_{i=1}^N \mathrm dx_i &=& \sqrt{\frac{\pi^N}{\det(iA)}}  \exp\left( \frac{i}{4} B^T A^{-1}B \right)
+\end{eqnarray*}
+
+We know that $A = O^T S O$,
+\begin{eqnarray*}
+	\int_{-\infty}^\infty \exp\left( -i X^T O^T S O X + i B O^T O X \right)\prod_{i=1}^N \mathrm dx_i &=& \sqrt{\frac{\pi^N}{\det(S)}} \exp\left( \frac i 4  B^T O^T O A^{-1} O^T O B \right)
+\end{eqnarray*}
+
+Since $Y=OX$, $D=OB$,
+\begin{eqnarray*}
+	\int_{-\infty}^\infty \exp\left( -i Y^T S Y +  i D^T Y \right)\prod_{i=1}^N \mathrm dy_i &=& \sqrt{\frac{\pi^N}{\det(S)}} \exp\left( \frac i 4 D^T S^{-1} D \right) 
+\end{eqnarray*}
+
+
+
+
+
+%%%%%%%  16.3 %%%%
+%%%  Show that the vector Y that makes the argument of the multiple gaussian integral (17.12) stationary is given by (17.13), and that the multiple gaussian integral (17.12) is equal to its exponential evaluated at its stationary point Y apart from a prefactor involving the determinant det iS.  %%%%%%%%
+\item
+
+
+
+
+%%%%%%%  16.4  %%%%%%%%%%
+\item
+
+
+
+
+
+
+%%%%%%%  16.5  %%%%%%%%%%
+\item
+\begin{eqnarray*}
+	\langle q \vert e^{-itH} \rangle &=& \int\int \mathrm dp' \mathrm dp'' \langle q\vert p' \rangle \langle p'  \vert e^{-i p^2/(2m\hbar) t} \vert p''\rangle \langle p'' \vert 0 \rangle \\
+	&=& \int \mathrm dp' \frac{1}{(2\hbar \pi)^3} e^{-\frac{-it}{2m\hbar} p'^2} e^{iqp/\hbar} \\
+	&=& \frac{1}{(2\pi \hbar)^3} \sqrt{\frac{\pi^3}{(it/(2 m\hbar))}} e^{2mq^2/(2\hbar t)} \\
+	&=& \left( \frac{m}{2\pi i\hbar t} \right)^{3/2} e^{imq^2/(2\hbar t)}
+\end{eqnarray*}
+
+
+
+%%%%%%%  16.6  %%%%%%%%%%
+\item
+
+
+
+
+
+
+
+%%%%%%%  16.7  %%%%%%%%%%
+\item
+
+\begin{eqnarray*}
+	S[q] &=& \int_0^t \left( \frac 12 m\dot q^2 - \frac 1 2 m \omega^2  q^2 \right)\mathrm dt' \\
+	&=& \int_0^t \frac 1 2 m\left( (-\omega q' \sin\omega t' + \dot q_0 \cos\omega t')^2 -  \omega^2 (q' \cos\omega t' + \frac{\dot q^2}{\omega} \sin\omega t')^2 \right)\mathrm d t'\\
+	&=& \frac{m\omega}{2\sin(\omega t)} \left( (q'^2 + q''^2)\cos\omega t - 2q'q'' \right)
+\end{eqnarray*}
+
+
+
+
+
+
+
+%%%%%%%  16.8  %%%%%%%%%%
+\item
+
+\begin{eqnarray*}
+	S[\delta q] &=& \int_0^t\mathrm dt' \left( \frac12 m \left( \sum_{n=1} a_n n\pi/t\cos\frac{n\pi t'}{t} \right)^2 -\frac12 m\omega^2\left( \sum_{n=1} a_n \sin\frac{n\pi t'}{t} \right)^2 \right) \\
+	&=& \int_0^t \mathrm dt'\left( \frac12 m \sum_{n=1} a_n^2 \frac{n^2\pi^2}{t^2} \cos^2\frac{n\pi t'}{t} - \frac12 m\omega^2 \sum_{n=0} a_n^2 \sin^2\frac{n\pi t'}{t}  \right) \\
+	&=& \sum_{n=1} \frac12 m a_n^2 \int_0^t \mathrm dt' \left( \frac{n^2 \pi^2}{t^2}\cos^2\frac{n\pi t'}{t} - \omega^2 \sin^2\frac{n\pi t'}{t}\right) \\
+	&=& \sum_{n=1} \frac{mt}{4} a_n^2 \left( n^2 \pi^2/t^2 - \omega^2 \right)
+\end{eqnarray*}
+
+
+
+
+
+
+%%%%%%%  16.9  %%%%%%%%%%
+\item
+
+
+When $q'=0$ and $q''=q$, it becomes
+\begin{eqnarray*}
+	\langle q \vert e^{-i t H/\hbar } \vert 0 \rangle &=& \sqrt{\frac{m\omega}{2\pi i \hbar \sin\omega t}} \exp\left[ i\frac{m\omega[ q^2 \cos\omega t ]}{2\hbar \sin\omega t} \right]
+\end{eqnarray*}
+
+In the limit of $t\rightarrow 0$, the trigonometric functions used in our calculation becomes $\sin\omega t \rightarrow \omega t$ and $\cos\omega t \rightarrow 1$.
+
+\begin{eqnarray*}
+	\lim_{t\rightarrow 0}\langle q \vert e^{-i t H/\hbar } \vert 0 \rangle &=& \sqrt{\frac{m}{2\pi i \hbar t}} \exp\left( \frac{imq^2}{2\hbar t} \right)
+\end{eqnarray*}
+
+
+
+
+
+%%%%%%%  16.10  %%%%%%%%%%
+\item
+
+
+
+
+%%%%%%%  16.11  %%%%%%%%%%
+\item
+
+\begin{eqnarray*}
+	S_e[q] &=& \int_0^{\beta} \left[ \frac12 m \dot q^2 +\frac12 m\omega^2 q^2 \right]\mathrm dt \\
+	&=& \int_0^{\beta} \frac12 m \left[ (A\omega e^{\omega t} - B \omega e^{-\omega t})^2 + \omega ( A e^{\omega t} + B e^{-\omega t})^2 \right] \\
+	&=& \frac{1}{2} m\omega^2 \int_0^\beta 2( A^2 e^{2\omega t} + B^2 e^{-2 \omega t}  )\mathrm dt \\
+	&=& m\omega^2 \left[ A^2 (e^{2\omega t} - 1) - B^2(e^{-2\omega t} - 1) \right]
+\end{eqnarray*}
+
+
+
+%%%%%%%  16.12  %%%%%%%%%%
+\item
+
+\begin{eqnarray*}
+	S_0[\phi] &=& \int \frac12 [ -\partial_a \phi(x)\partial^a \phi(x) -m^2 \phi(x)] \mathrm d^4x \\
+	&=& \int \frac12 \left[ -\int ip_a e^{ip' x}\tilde \phi(p')\frac{1}{(2\pi)^4}\mathrm d^4p' \int\left(-ip_a e^{-ip'' x} \tilde \phi(-p'')\right) \frac{\mathrm d^4p''}{(2\pi)^4}\right. \\
+	&& \left. - m^2\int\int \frac{\mathrm dp'}{(2\pi)^4} \frac{\mathrm dp''}{(2\pi)^4} e^{ip'-p''}x\tilde \phi(p')\tilde\phi(-p'')  \right]\mathrm d^4 x \\
+	&=& - \int \mathrm d^4 x e^{i(p'-p'')x}\int\frac12 (p^2 + m^2)\tilde \phi (p')\tilde\phi(-p'')  \frac{\mathrm d^4 p'}{(2\pi)^4}\frac{\mathrm d^4p''}{(2\pi)^4} \\
+	&=& - \delta(p'-p'')\int \frac12 (p^2 + m^2) \tilde\phi(p')\tilde\phi(-p'') \frac{\mathrm d^4 p'}{(2\pi)^4}\frac{\mathrm d^4p''}{(2\pi)^4} \\
+	&=& -\frac12 \int\vert \tilde\phi(p)\vert^2 (p^2 + m^2) \frac{\mathrm d^4 p}{(2\pi)^4}
+\end{eqnarray*}
+
+
+
+%%%%%%%  16.13  %%%%%%%%%%
+\item
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\end{enumerate}
+
+
+
+
+
+
+
+
+
+
+
+\end{document}
