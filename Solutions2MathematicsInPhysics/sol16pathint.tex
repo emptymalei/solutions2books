@@ -109,7 +109,7 @@
 \begin{enumerate}
 
 
-\begin{comment}
+%\begin{comment}
 
 
 
@@ -161,11 +161,89 @@ Since $Y=OX$, $D=OB$,
 %%%  Show that the vector Y that makes the argument of the multiple gaussian integral (17.12) stationary is given by (17.13), and that the multiple gaussian integral (17.12) is equal to its exponential evaluated at its stationary point Y apart from a prefactor involving the determinant det iS.  %%%%%%%%
 \item
 
+Denote
+\begin{equation*}
+	I = \int _{-\infty}^\infty  \exp\left( -iY^T S Y + i D^T Y \right) \prod_i^N dy_i
+\end{equation*}
+
+Variation of $I$
+\begin{equation*}
+\begin{split}
+	\delta I ={}& \int_{-\infty}^\infty \left[ \exp\left( -i (Y+\delta Y)^T S (Y+ \delta Y) + i D^T(Y + \delta Y) \right) - \exp\left( -i Y^T S Y + i D^T Y \right) \right]\prod_i^N dy_i \\
+	={}& \int_{-\infty}^\infty \exp\left( -i Y^T S Y + i D^T Y \right) \left[\exp\left( -i(2Y^T S - D^T)\delta Y \right)-1\right] \prod_i^N dy_i  
+\end{split}
+\end{equation*}
+
+To make $I$ stationary, $\delta I = 0$, that is
+\begin{equation*}
+	2\bar Y^T D - D^T = 0
+\end{equation*}
+
+Then we have
+\begin{equation*}
+	\bar Y = \frac12 S^{-1}D
+\end{equation*}
+
+
+At its stationary point, the integrand of $I$ becomes
+\begin{equation*}
+\begin{split}
+	{}&\exp\left[ -i\left( \frac12 S^{-1}D \right)^T S \left(\frac12 S^{-1}D\right) + i D\left( \frac12 S^{-1}D \right) \right] \\
+	={}& \exp\left(\frac14 i D^T S^{-1}D\right)
+\end{split}
+\end{equation*}
+which is different from the integral result of $I$ with a prefactor $\sqrt{\pi^N/\det(iS)}$.
+
+
+
+
 
 
 
 %%%%%%%  16.4  %%%%%%%%%%
 \item
+
+Denote
+\begin{equation*}
+	I = \int_{-\infty}^\infty \exp\left( -Y^T S Y + D^T Y \right)\prod_i^N dy_i 
+\end{equation*}
+
+
+Then
+\begin{equation*}
+\begin{split}
+	\delta I ={}& \int_{-\infty}^\infty \left[ \exp\left(-(Y+\delta Y)^T S (Y+\delta Y) + D^T(Y+\delta Y)\right) -\exp\left( -Y^T S Y + D^T Y \right)  \right]\prod_i^N dy_i\\
+	={}& \int_{-\infty}^\infty \exp\left( -Y^T S Y + D^T Y \right)\left[\exp\left( -(2Y^T S - D^T)\delta Y \right)-1\right]\prod_i^N dy_i
+\end{split}
+\end{equation*}
+
+To make $I$ stationary, 
+\begin{equation*}
+	2\bar Y^T S - D^T =0 .
+\end{equation*}
+i.e.,
+\begin{equation*}
+	\bar Y = \frac12 S^{-1}D
+\end{equation*}
+
+
+Put $\bar Y = \frac12 S^{-1}D $ into the integrand of $I$, we get
+\begin{equation*}
+\begin{split}
+	{}&\exp\left[ -\left(\frac12 S^{-1}D\right)^T S \frac12 S^{-1}D + D^T \frac12 S^{-1}D \right] \\
+	={}& \exp\left( -\frac14 D^T S^{-1}SS^{-1}D  + \frac12 D^T S^{-1}D \right) \\
+	={}& \exp\left( \frac14 D^T S^{-1}D \right)
+\end{split}
+\end{equation*}
+which is the same as the integral result of $I$ apart from a prefactor.
+
+
+
+
+
+
+
+
 
 
 
@@ -247,6 +325,7 @@ In the limit of $t\rightarrow 0$, the trigonometric functions used in our calcul
 
 
 
+
 %%%%%%%  16.11  %%%%%%%%%%
 \item
 
@@ -295,7 +374,7 @@ In the limit of $t\rightarrow 0$, the trigonometric functions used in our calcul
 %%%%%%%  16.14  %%%%%%%%%%
 \item
 
-{\color{red} Not Finished!!! Check out it after the other problems are solved.}
+{\color{red} Check this problem.}
 
 Fourier transform of $\phi(\vec x,t)$ and $\phi(p)$ are
 \begin{eqnarray*}
@@ -511,7 +590,7 @@ Then
 \end{equation*}
 
 
-\end{comment}
+%\end{comment}
 %%%%%%%  16.24  %%%%%%%%%%
 \item
 
